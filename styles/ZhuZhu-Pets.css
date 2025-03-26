@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url(images/rania/background_image.png);
+    background-image: url(images/zhuzhu/background_image.png);
     background-size: contain;
     font-family: "Pixelify Sans", sans-serif;
 }
@@ -36,7 +36,7 @@ body {
     outline-style: dotted;
     outline-width: 3px;
     outline-color: azure;
-    background-image: url(images/rania/zhuzhu_pets_banner.jpg);
+    background-image: url(images/zhuzhu/zhuzhu_pets_banner.jpg);
     background-size: contain;
     width: 100%;
 }
