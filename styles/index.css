@@ -1,5 +1,123 @@
+body{
+    background-color:antiquewhite;
+    font-family: "Fredoka";
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 50px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: linear-gradient(to bottom, #82df8a, #8ac0f9); /* Gradient background */
+    position: relative;
+    width: 100%;
+}
+
 h1{
     font-size: 80px;
     text-align: center;
+}
+
+main{
+    background-color: #a3a9dd;
+}
+
+.toybox-container{
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.toybox-wrapper{
+    position: relative;
+    display:inline-block
+}
+
+/*#box-closed, #sparkle{
+    display:none
+}
+for testing purposes, comment below and uncomment this to test toy placement, etc*/
+
+#box-open, #sparkle, .toys {
+    display: none;
+}
+
+.toys{
+    position: absolute;
+    width: 80px; 
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    filter: drop-shadow(0px -4px 8px rgba(255, 255, 255, 0.4)) 
+        drop-shadow(0px 8px 8px rgba(0, 0, 0, 1));
+}
+
+#toy1 {
+    filter: drop-shadow(0px -4px 8px rgba(255, 255, 255, 0.4)); 
+}
+
+.toys:hover {
+    transform: scale(1.2);
+}
+
+#toy1 { top: 33%; left: 38%; } /* trashpack */
+#toy2 { top: 34%; left: 49%; } /* furby */
+#toy3 { top: 28%; left: 58%; } /* hotwheel */
+#toy4 { top: 19%; left: 40%; } /* tamagotchi */
+#toy5 { top: 28%; left: 27%; } /* zhuzhu */
+
+#sparkle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+.content-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: rgb(247, 233, 188);
+    background-color: rgb(129, 202, 236);
 }
 
