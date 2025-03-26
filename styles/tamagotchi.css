@@ -2,12 +2,12 @@
 
 
 * {
-    cursor: url(/tamagotchi/cursor.png), auto;
+    cursor: url(../images/tamagotchi/cursor.png), auto;
     box-sizing: border-box;
 }
 
 body {
-    background-image: url(/tamagotchi/bg.png);
+    background-image: url(../images/tamagotchi/bg.png);
     background-size: contain;
     font-family: "Pixelify Sans", sans-serif;
 }
@@ -37,7 +37,7 @@ body {
     outline-style: dotted;
     outline-width: 3px;
     outline-color: azure;
-    background-image: url(/tamagotchi/banner.gif);
+    background-image: url(../images/tamagotchi/banner.gif);
     background-size: contain;
     width: 100%;
 }
