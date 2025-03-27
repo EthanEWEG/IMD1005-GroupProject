@@ -82,9 +82,13 @@ for testing purposes, comment below and uncomment this to test toy placement, et
     filter: drop-shadow(0px -4px 8px rgba(255, 255, 255, 0.4)); 
 }
 
-.toys:hover {
+.toys:hover, #toy1:hover {
     transform: scale(1.2);
+    filter: brightness(115%) sepia(50%);
 }
+
+
+
 
 #toy1 { top: 33%; left: 38%; } /* trashpack */
 #toy2 { top: 34%; left: 49%; } /* furby */
