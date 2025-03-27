@@ -1,6 +1,7 @@
-body{
-    background-color:rgb(236, 215, 250);
+body {
+    background-color: rgb(236, 215, 250);
     background-image: url(../images/index/bg.jpg);
+    cursor: url(/images/index/index_cursor.png), auto;
     font-family: "Fredoka";
     background-blend-mode: lighten;
 }
@@ -17,37 +18,40 @@ body{
 }
 
 header {
+    border-width: 4px;
     display: flex;
     justify-content: center;
     padding: 30px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-color:#ddd7a3;
+    background-color: #ddd7a3;
     position: relative;
     width: 100%;
 }
 
-h1{
+h1 {
     font-size: 80px;
     text-align: center;
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
 }
 
-main{
+main {
     background-color: #a3a9dd;
 }
 
-.toybox-container{
-    position: relative; 
+.toybox-container {
+    cursor: url(/images/index/index_cursor.png), auto;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 30px 0px;
 }
 
-.toybox-wrapper{
+.toybox-wrapper {
+    cursor: url(/images/index/index_cursor.png), auto;
     position: relative;
-    display:inline-block
+    display: inline-block
 }
 
 /*#box-closed, #sparkle{
@@ -55,46 +59,75 @@ main{
 }
 for testing purposes, comment below and uncomment this to test toy placement, etc*/
 
-#box-open, #sparkle, .toys {
+#box-open,
+#sparkle,
+.toys {
     display: none;
 }
 
 #box-closed {
+    cursor: url(/images/index/index_cursor.png), auto;
     cursor: pointer;
     background-color: transparent;
     border: none;
 }
 
-#box-closed:hover{
+#box-closed:hover {
+    cursor: url(/images/index/index_cursor.png), auto;
     filter: brightness(70%) sepia(50%);
 }
 
-.toys{
+.toys {
     position: absolute;
-    width: 80px; 
+    width: 80px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-    filter: drop-shadow(0px -4px 8px rgba(255, 255, 255, 0.4)) 
-        drop-shadow(0px 8px 8px rgba(0, 0, 0, 1));
+    filter: drop-shadow(0px -4px 8px rgba(255, 255, 255, 0.4)) drop-shadow(0px 8px 8px rgba(0, 0, 0, 1));
 }
 
 #toy1 {
-    filter: drop-shadow(0px -4px 8px rgba(255, 255, 255, 0.4)); 
+    cursor: url(/images/index/index_cursor.png), auto;
+    filter: drop-shadow(0px -4px 8px rgba(255, 255, 255, 0.4));
 }
 
-.toys:hover, #toy1:hover {
+.toys:hover {
     transform: scale(1.2);
-    filter: brightness(115%) sepia(50%);
 }
 
+#toy1 {
+    top: 33%;
+    left: 38%;
+}
 
+/* trashpack */
+#toy2 {
+    cursor: url(/images/index/index_cursor.png), auto;
+    top: 34%;
+    left: 49%;
+}
 
+/* furby */
+#toy3 {
+    cursor: url(/images/index/index_cursor.png), auto;
+    top: 28%;
+    left: 58%;
+}
 
-#toy1 { top: 33%; left: 38%; } /* trashpack */
-#toy2 { top: 34%; left: 49%; } /* furby */
-#toy3 { top: 28%; left: 58%; } /* hotwheel */
-#toy4 { top: 19%; left: 40%; } /* tamagotchi */
-#toy5 { top: 28%; left: 27%; } /* zhuzhu */
+/* hotwheel */
+#toy4 {
+    cursor: url(/images/index/index_cursor.png), auto;
+    top: 19%;
+    left: 40%;
+}
+
+/* tamagotchi */
+#toy5 {
+    cursor: url(/images/index/index_cursor.png), auto;
+    top: 28%;
+    left: 27%;
+}
+
+/* zhuzhu */
 
 #sparkle {
     position: absolute;
@@ -106,20 +139,33 @@ for testing purposes, comment below and uncomment this to test toy placement, et
 .fade-in {
     animation: fadeIn 1s forwards;
 }
+
 .fade-out {
     animation: fadeOut 1s forwards;
 }
+
 @keyframes fadeIn {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
 @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 
-.content-container{
+.content-container {
     display: grid;
     justify-content: center;
     text-align: center;
@@ -127,49 +173,51 @@ for testing purposes, comment below and uncomment this to test toy placement, et
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     padding: 40px;
-    gap:40px;
+    gap: 40px;
 }
 
-@media (max-width:900px){
-    .content-container{
-        grid-template-columns:1fr;
+@media (max-width:900px) {
+    .content-container {
+        grid-template-columns: 1fr;
     }
 }
 
-.content-2, .content-1 {
+.content-2,
+.content-1 {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     text-align: center;
+    color: aliceblue;
     gap: 15px;
 }
 
-.content-container h2{
+.content-container h2 {
     font-weight: bold;
     font-size: 40px;
 }
 
-.content-container p{
+.content-container p {
     text-align: left;
     font-size: 18px;
 }
 
-.content-container a{
+.content-container a {
     display: inline-block;
     width: 200px;
     padding: 10px 20px;
-    background-color:#a3dddd;
-    color: black;
+    background-color: #a3dddd;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 8px;
     font-family: "Baloo 2";
     text-align: center;
-    font-size:20px;
+    font-size: 20px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.content-container a:hover{
-    background-color:#78a8a8;
+.content-container a:hover {
+    background-color: #78a8a8;
     transform: scale(1.05);
 }
 
@@ -185,11 +233,10 @@ for testing purposes, comment below and uncomment this to test toy placement, et
 
 footer {
     display: flex;
-    font-size: 18px;
+    font-size: 20px;
     justify-content: center;
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #a9dda3;
 }
-
