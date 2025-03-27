@@ -137,6 +137,7 @@ body {
 
 .music_box {
     display: grid;
+    height: 25vh;
 }
 
 .music_box .iframe {
@@ -150,29 +151,68 @@ body {
     font-weight: 100;
 }
 
+.links img {
+    border: 3px dashed #ffffff;
+    justify-content: center;
+}
+
 .content {
     grid-area: content;
     display: grid;
+    width: 100%;
     justify-content: center;
     background-color: #e35095;
 }
 
-.article_title {
+/*memeory game*/
+
+.memory-game {
+    width: 890px;
+    height: 540px;
     display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    padding: 10px;
     justify-content: center;
-    color: #e35095;
 }
 
-.article_paragraph {
+.memory-card {
     display: grid;
-    justify-content: flex-start;
+    width: calc(25% - 50px);
+    height: calc(35% - 20px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
-.article_image {
-    display: flex;
-    justify-content: flex-end;
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
 }
 
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #fff8c1;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+/*video*/
 .video_container {
     display: flex;
     padding: 10px;
@@ -193,6 +233,12 @@ body {
     display: grid;
     justify-content: center;
     background-color: #de83e5;
+}
+
+.gif_images {
+    display: grid;
+    padding-top: 50px;
+    padding-bottom: 25px;
 }
 
 .footer {
@@ -221,5 +267,52 @@ body {
             "content"
             "sidebar-secondary"
             "footer";
+    }
+
+    .memory-game {
+        width: 100%;
+        height: 540px;
+    }
+
+    .memory-card {
+        width: calc(25% - 10px);
+        height: calc(40% - 70px);
+        position: relative;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .5s;
+    }
+
+    .marquee {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+        background-color: #fce6fc;
+        overflow: hidden;
+        position: relative;
+        height: 50px;
+        width: 100%;
+        /* Full width of its parent */
+        white-space: nowrap;
+    }
+
+    .marquee img {
+        position: absolute;
+        width: auto;
+        object-fit: contain;
+        height: 5vh;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+        transform: translateX(100%);
+        animation: scroll-left 20s linear infinite;
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
     }
 }
