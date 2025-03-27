@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trash Packs</title>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/trashpack-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header_title">
+        <img src="images/trash-pack/header.png" alt="Trash Packs colorful logo with cartoon trash cans and characters"
+          class="header-image">
+      </div>
+    </header>
+
+    <aside class="sidebar-main">
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Navigation</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="navbar">
+            <a href="#" onmouseover="addParticles(this)">Home</a>
+            <a href="#" onmouseover="addParticles(this)">Rania</a>
+            <a href="#" onmouseover="addParticles(this)">Ryan</a>
+            <a href="#" onmouseover="addParticles(this)">Yein</a>
+            <a href="#" onmouseover="addParticles(this)">Kit</a>
+            <a href="#" onmouseover="addParticles(this)">Ethan</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Theme</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <button class="theme-toggle-btn retro-btn">🌙 Dark Mode</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Visitors</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <h3>Visitors: <span id="visitorCounter">0000</span></h3>
+            <div>📊 Since 2006</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Music Player</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <marquee id="songTitle" behavior="scroll" direction="left">♫ Trash Rock Anthem ♫</marquee>
+            <audio id="player" controls>
+              <source src="sound.mp3" type="audio/mpeg">
+            </audio>
+            <button onclick="skipTrack()" class="retro-btn">⏭️ Next Track</button>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <main class="content">
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Trash Packs!</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="hero-section">
+              <img src="images/trash-pack/header.png" alt="Trash Packs main banner showing various trash can characters"
+                class="hero-image">
+              <div class="hero-text">
+                <h1 id="mainHeader" onclick="animateHeader()">Trash Packs!</h1>
+                <p class="hero-subtitle">Moose Toys' gross-out collectible phenomenon (2011-2019)</p>
+                <button class="hero-btn retro-btn">Let's Go!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">About</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="content-box">
+              <h2>About Trash Packs</h2>
+              <div class="about-content">
+                <img src="images/trash-pack/moose-toys-logo.png" alt="Moose Toys company logo" class="float-right">
+                <div class="about-text">
+                  <p>Created by <strong>Moose Toys</strong> (makers of Shopkins and Grossery Gang), Trash Packs launched
+                    in
+                    <strong>2011</strong> as miniature collectible trash cans containing gross-out themed figures.
+                  </p>
+                  <p>The line included:</p>
+                  <ul>
+                    <li>Blind-pack trash canisters (3-5 items per pack)</li>
+                    <li>Dumpster playsets with interactive features</li>
+                    <li>Special editions like Toxic Revolting Trash</li>
+                    <li>Trading cards with gameplay elements</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="split-section">
+              <div class="split-text">
+                <h2>Why Kids Loved Them</h2>
+                <p>Trash Packs became a phenomenon because:</p>
+                <ul>
+                  <li>Exciting blind-pack experience</li>
+                  <li>Rebellious "gross" factor parents disliked</li>
+                  <li>500+ unique characters to collect</li>
+                  <li>Affordable price (~$3-5 per pack)</li>
+                </ul>
+                <div class="warning">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <p>Note: Discontinued in 2019 to focus on Grossery Gang</p>
+                </div>
+              </div>
+              <div class="split-image">
+                <img src="images/trash-pack/limited-edition.jpg" alt="Limited edition Trash Packs collection with rare figures">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Trash</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="slime-wave-container">
+              <div class="slime-wave">
+                <div class="slime-flow"></div>
+                <div class="slime-drip" style="--delay: 0s; --left: 20%;"></div>
+                <div class="slime-drip" style="--delay: 0.8s; --left: 50%;"></div>
+                <div class="slime-drip" style="--delay: 1.6s; --left: 80%;"></div>
+              </div>
+              <div class="gloop"
+                style="--left: 25%; --delay: 2s; --size: 18px; --fall-distance: 80px; --fall-duration: 3s;"></div>
+              <div class="gloop"
+                style="--left: 40%; --delay: 3.5s; --size: 22px; --fall-distance: 100px; --fall-duration: 4s;"></div>
+              <div class="gloop"
+                style="--left: 65%; --delay: 1.8s; --size: 15px; --fall-distance: 70px; --fall-duration: 2.5s;"></div>
+              <div class="gloop"
+                style="--left: 85%; --delay: 4s; --size: 25px; --fall-distance: 120px; --fall-duration: 5s;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="content-box">
+          <h2 class="carousel-title">Featured Trash Collections</h2>
+          <div class="carousel">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+            <div class="carousel-track">
+              <div class="carousel-slide active">
+                <img src="images/trash-pack/AstroTrash.png" alt="Astro Trash collection" style="max-height: 350px;">
+                <div class="slide-caption">Astro Trash - Space Series</div>
+              </div>
+              <div class="carousel-slide">
+                <img src="images/trash-pack/JoosedTrash.png" alt="Joosed Trash collection" style="max-height: 350px;">
+                <div class="slide-caption">Joosed Trash - Juice Series</div>
+              </div>
+              <div class="carousel-slide">
+                <img src="images/trash-pack/BugTrash.png" alt="Bug Trash collection" style="max-height: 350px;">
+                <div class="slide-caption">Bug Trash - Insect Series</div>
+              </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Collections</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="content-box">
+              <h2>Main Series Releases</h2>
+              <div class="series-grid">
+                <div class="series-card">
+                  <img src="images/trash-pack/series1.jpg" alt="Trash Packs Series 1 original release with green lids">
+                  <div class="series-info">
+                    <h3>Series 1 (2011)</h3>
+                    <p>169 figures across 7 teams</p>
+                    <p>Original release with green lids</p>
+                  </div>
+                </div>
+                <div class="series-card">
+                  <img src="images/trash-pack/series2.jpg" alt="Trash Packs Series 2 with glow-in-the-dark figures">
+                  <div class="series-info">
+                    <h3>Series 2 (2012)</h3>
+                    <p>Glow-in-the-dark figures</p>
+                    <p>Introduced blue lid rarity system</p>
+                  </div>
+                </div>
+                <div class="series-card">
+                  <img src="images/trash-pack/series7.jpg" alt="Trash Packs Series 7 Junk Germs in test tube packaging">
+                  <div class="series-info">
+                    <h3>Series 7: Junk Germs (2014)</h3>
+                    <p>Test tube packaging</p>
+                    <p>Microbe-themed characters</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="special-editions">
+                <h3>Special Editions:</h3>
+                <div class="edition-grid">
+                  <div class="edition-item">
+                    <img src="images/trash-pack/rare-1.jpg" alt="Squish Bone">
+                    <p>Squish Bone</p>
+                  </div>
+                  <div class="edition-item">
+                    <img src="images/trash-pack/rare-2.jpg" alt="Poop Plop">
+                    <p>Poop Plop</p>
+                  </div>
+                  <div class="edition-item">
+                    <img src="images/trash-pack/rare-3.jpg" alt="Festering Fowl">
+                    <p>Festering Fowl</p>
+                  </div>
+                  <div class="edition-item">
+                    <img src="images/trash-pack/rare-4.jpg" alt="Poo Plumbing">
+                    <p>Poo Plumbing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Trash Rarity</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="split-section">
+              <div class="split-image">
+                <img src="images/trash-pack/most-rare.jpg" alt="Most rare trashpacks">
+              </div>
+              <div class="split-text">
+                <h2>Official Rarity System</h2>
+                <p>Figures were categorized by:</p>
+                <ul>
+                  <li><span class="common">Common</span> (Green lids - 60%)</li>
+                  <li><span class="uncommon">Uncommon</span> (Blue lids - 25%)</li>
+                  <li><span class="rare">Rare</span> (Purple lids - 10%)</li>
+                  <li><span class="ultra-rare">Ultra Rare</span> (Metallic - 5%)</li>
+                </ul>
+
+                <h3>Most Valuable Today:</h3>
+                <ol>
+                  <li>Series 1 "King Rat" - $80-$120</li>
+                  <li>2013 Comic-Con Exclusive - $200+</li>
+                  <li>Series 3 "Grimy Gold" - $2000+</li>
+                </ol>
+
+                <div class="pro-tip">
+                  <h3><i class="fas fa-lightbulb"></i> Collector Tip:</h3>
+                  <p>Heavier packs often contain metal 'dumpster lid' pieces!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Trash</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="slime-wave-container">
+              <div class="slime-wave">
+                <div class="slime-flow"></div>
+                <div class="slime-drip" style="--delay: 0s; --left: 20%;"></div>
+                <div class="slime-drip" style="--delay: 0.8s; --left: 50%;"></div>
+                <div class="slime-drip" style="--delay: 1.6s; --left: 80%;"></div>
+              </div>
+              <div class="gloop"
+                style="--left: 25%; --delay: 2s; --size: 18px; --fall-distance: 80px; --fall-duration: 3s;"></div>
+              <div class="gloop"
+                style="--left: 40%; --delay: 3.5s; --size: 22px; --fall-distance: 100px; --fall-duration: 4s;"></div>
+              <div class="gloop"
+                style="--left: 65%; --delay: 1.8s; --size: 15px; --fall-distance: 70px; --fall-duration: 2.5s;"></div>
+              <div class="gloop"
+                style="--left: 85%; --delay: 4s; --size: 25px; --fall-distance: 120px; --fall-duration: 5s;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Trash Timeline</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="split-section reversed">
+              <div class="split-text">
+                <h2>Product History</h2>
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <h3>2010 - Development</h3>
+                    <p>Moose Toys begins developing the gross-out concept</p>
+                  </div>
+                  <div class="timeline-item">
+                    <h3>2011 - Series 1 Launch</h3>
+                    <p>Debuts with 169 figures across 7 teams</p>
+                  </div>
+                  <div class="timeline-item">
+                    <h3>2014 - Peak Popularity</h3>
+                    <p>Series 7 "Junk Germs" releases in test tubes</p>
+                  </div>
+                  <div class="timeline-item">
+                    <h3>2019 - Discontinuation</h3>
+                    <p>Moose Toys focuses on Grossery Gang line</p>
+                  </div>
+                </div>
+              </div>
+              <div class="split-image">
+                <img src="images/trash-pack/trashpack-variety.jpg" alt="Historical timeline of Trash Packs product evolution">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Where to Buy</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="content-box">
+              <h2>Finding Trash Packs Today</h2>
+
+              <div class="buy-options">
+                <div class="buy-option">
+                  <img src="images/trash-pack/online-shopping.jpg" alt="Online shopping for Trash Packs">
+                  <div class="buy-info">
+                    <h3><i class="fas fa-shopping-cart"></i> Online</h3>
+                    <ul>
+                      <li>eBay (most active)</li>
+                      <li>Facebook Marketplace</li>
+                      <li>Collector forums</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="buy-option">
+                  <img src="images/trash-pack/in-store.jpg" alt="Physical stores selling Trash Packs">
+                  <div class="buy-info">
+                    <h3><i class="fas fa-store"></i> In Person</h3>
+                    <ul>
+                      <li>Local toy collector stores</li>
+                      <li>Toy conventions</li>
+                      <li>Some thrift stores</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Gallery</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="content-box">
+              <h2>Trash Pack Gallery</h2>
+              <div class="image-grid">
+                <div class="grid-item">
+                  <img src="images/trash-pack/trash-grid-1.jpg" alt="Series 1 common figures displayed on white background">
+                  <div class="grid-caption">Series 1 Common Figures</div>
+                </div>
+                <div class="grid-item">
+                  <img src="images/trash-pack/trash-grid-2.jpg" alt="Series 2 dumpster playset with opening lid">
+                  <div class="grid-caption">Series 2 Dumpster Playset</div>
+                </div>
+                <div class="grid-item">
+                  <img src="images/trash-pack/trash-grid-3.jpg" alt="Ultra rare metallic figures shining under light">
+                  <div class="grid-caption">Ultra Rare Metallic Figures</div>
+                </div>
+                <div class="grid-item">
+                  <img src="images/trash-pack/trash-grid-4.jpg" alt="Official Trash Packs trading cards spread out">
+                  <div class="grid-caption">Official Trading Cards</div>
+                </div>
+                <div class="grid-item">
+                  <img src="images/trash-pack/trash-grid-5.jpg" alt="Comic-Con exclusive limited edition figure">
+                  <div class="grid-caption">2013 Comic-Con Exclusive</div>
+                </div>
+                <div class="grid-item">
+                  <img src="images/trash-pack/trash-grid-6.jpg" alt="Trashies reboot series with new designs">
+                  <div class="grid-caption">2018 Trashies Reboot</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Game</div>
+            <div class="window_button_display">
+              <div class="window_buttons">_</div>
+              <div class="window_buttons">□</div>
+              <div class="window_buttons">x</div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="game-box">
+              <div class="game-content">
+                <h3>Trash Collector</h3>
+                <p>Collect rare Trash Packs before time runs out!</p>
+                <button onclick="startGame()" id="startBtn" class="retro-btn">Start Game</button>
+                <div id="gameInfo">Time: <span id="timer">30</span> | Score: <span id="score">0</span></div>
+                <div id="gameArea"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar-secondary">
+    </aside>
+
+    <footer class="footer">
+      <p>Created by Ryan Swanson<br>Trash Packs™ is a trademark of Moose Toys</p>
+    </footer>
+  </div>
+
+  <script src="scripts/trashpack-scripts.js"></script>
+</body>
+
+</html>
