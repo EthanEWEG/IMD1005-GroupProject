@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5+Charted&family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Pixelify Sans", sans-serif;
+    background-image: url(/images/credits/bg.gif);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer footer ";
+    background-image: url(/images/credits/windows_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 200px;
+    height: 70vh;
+    border: 4px solid #ffffff;
+}
+
+.header {
+    background-color: rgb(9, 75, 53);
+}
+
+.title {
+    display: grid;
+}
+
+.title .window {
+    border: 4px ridge #606060;
+
+    overflow: hidden;
+    box-shadow: 0 1px 1px 1px rgba(248, 150, 200, 0.5);
+    background: linear-gradient(180deg,
+            rgb(246, 202, 224) 40%,
+            rgba(226, 117, 236, 0.893) 100%);
+}
+
+.title .window_tab {
+    text-align: left;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #121212;
+    border-bottom: 3px solid #353535;
+    padding: 1px;
+    background-color: #9c979d;
+}
+
+
+.title .window_title {
+    display: inline-block;
+    color: #191919;
+    margin: 1px 1px 5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.title .window_button_display {
+    float: right;
+    margin-right: 5px;
+}
+
+.title .window_buttons {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid #282828;
+    border-right: 2px solid #282828;
+    color: #ffffff;
+    padding: 2px;
+    line-height: 8px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+
+.title .window_buttons:hover {
+    background-color: rgb(53, 53, 53);
+    color: rgb(255, 255, 255);
+
+}
+
+
+.window {
+    border: 4px ridge #606060;
+    overflow: hidden;
+    box-shadow: 0 1px 1px 1px rgba(248, 150, 200, 0.5);
+    background: linear-gradient(180deg,
+            rgb(246, 202, 224) 40%,
+            rgba(226, 117, 236, 0.893) 100%);
+}
+
+.window_tab {
+    text-align: left;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #de83e5;
+    border-bottom: 3px solid #de83e5;
+    padding: 1px;
+    background-color: #f7cbfb;
+}
+
+.window_title {
+    display: inline-block;
+    color: #191919;
+    margin: 1px 1px 5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.window_button_display {
+    float: right;
+    margin-right: 5px;
+}
+
+.window_buttons {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid #c6397b;
+    border-right: 2px solid #8c2555;
+    color: #e35095;
+    padding: 2px;
+    line-height: 8px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+
+.window_buttons:hover {
+    background-color: rgb(207, 87, 193);
+    color: rgb(255, 255, 255);
+
+}
+
+
+.task {
+    display: grid;
+
+}
+
+.task .window {
+    border: 4px ridge #606060;
+
+
+    overflow: hidden;
+    box-shadow: 0 1px 1px 1px rgba(248, 150, 200, 0.5);
+    background: linear-gradient(180deg,
+            rgb(134, 134, 134) 40%,
+            rgba(134, 134, 134, 0.893) 100%);
+}
+
+.task .window_tab {
+    text-align: left;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #121212;
+    border-bottom: 3px solid #353535;
+    padding: 1px;
+    background-color: #9c979d;
+}
+
+.task .window_tab h3 {
+    display: flex;
+}
+
+.task .window_title {
+    display: grid;
+    color: #191919;
+    margin: 1px 1px 5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.task .window_button_display {
+    float: right;
+    margin-right: 5px;
+}
+
+.task .window_buttons {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid #282828;
+    border-right: 2px solid #282828;
+    color: #ffffff;
+    padding: 2px;
+    line-height: 8px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+
+.task .window_buttons:hover {
+    background-color: rgb(53, 53, 53);
+    color: rgb(255, 255, 255);
+
+}
