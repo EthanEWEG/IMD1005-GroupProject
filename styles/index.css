@@ -80,7 +80,7 @@ for testing purposes, comment below and uncomment this to test toy placement, et
 .toys {
     position: absolute;
     width: 80px;
-    cursor: pointer;
+
     transition: transform 0.2s ease-in-out;
     filter: drop-shadow(0px -4px 8px rgba(255, 255, 255, 0.4)) drop-shadow(0px 8px 8px rgba(0, 0, 0, 1));
 }
@@ -217,11 +217,13 @@ for testing purposes, comment below and uncomment this to test toy placement, et
 }
 
 .content-container a:hover {
+    cursor: url(/images/index/index_cursor.png), auto;  
     background-color: #78a8a8;
     transform: scale(1.05);
 }
 
 .content-container a:active {
+    cursor: url(/images/index/index_cursor.png), auto;  
     background-color: #787ea8;
     transform: scale(0.98);
 }

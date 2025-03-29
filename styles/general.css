@@ -2,3 +2,34 @@ h1, h2{
     font-family: "Baloo 2";
     font-weight: 600;
 }
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    justify-self: center;
+    background: #AA151B;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    transition: transform 1.3s ease-in-out;
+}
+
+.skip-link:focus {
+    top: 10px;
+    outline: solid rgb(208, 255, 0);
+}
+
+.skip-link:focus + nav {
+    margin-top: 40px;
+}
+
+.skip-link:hover{
+    background-color: #cd8d90;
+}
+
+.skip-link:active{
+    background-color: #9bcd8d;
+}

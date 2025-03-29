@@ -1,0 +1,198 @@
+* {
+    cursor: url(/images/hot-wheel/cursor.svg), auto;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(255, 160, 96, 0.5);
+    background-image: url(../images/hot-wheel/bg.jpg);
+    background-size: 50%;
+    cursor: url(/images/index/index_cursor.png), auto;
+    font-family: "Fredoka";
+    background-blend-mode: lighten;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 50px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+header {
+    border-width: 4px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #800020;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    outline-style: dotted;
+    outline-width: 3px;
+    outline-color: rgb(0, 0, 0);
+    outline-offset: -2px;
+}
+
+.road{
+    position:absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #ffde4a;
+}
+
+.car {
+    position: absolute;
+    bottom: 10px;
+    left: -200px;
+    animation: drive 5s linear infinite;
+}
+
+.car img{
+    width: 30%;
+}
+
+@keyframes drive {
+    0% { transform: translateX(-200px); }
+    100% { transform: translateX(100vw); }
+}
+
+.smoke {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(150, 150, 150, 0.8);
+    border-radius: 50%;
+    bottom: 10px;
+    left: 20px;
+    opacity: 0;
+    animation: smokeEffect 1s ease-out infinite;
+}
+
+@keyframes smokeEffect {
+    0% {
+        transform: scale(0.5) translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4) translate(-60px, 0px);
+        opacity: 0;
+        bottom: 100px;
+    }
+}
+
+main{
+    display:grid;
+    grid-template-columns: 0.35fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-main {
+    background-color: #2F2F2F ;
+}
+
+.window {
+    border: 4px ridge #2F2F2F  ;
+    overflow: hidden;
+    box-shadow: 0 1px 1px 1px rgba(248, 189, 150, 0.5);
+    background: linear-gradient(180deg,
+    #ff9320 40%,
+    #a05c14 100%);
+}
+
+.window_tab {
+    text-align: left;
+    border: 2px solid #2F2F2F; 
+    border-bottom: 3px solid #2F2F2F ;
+    padding: 1px;
+    background-color: #ff9320 ;
+}
+
+.window_title {
+    display: inline-block;
+    color: #000000;
+    margin: 1px 1px 5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.window_button_display {
+    float: right;
+    margin-right: 5px;
+}
+
+.window_buttons {
+    border: 2px solid #000000;
+    border-bottom: 4px solid #000000;
+    border-right: 4px solid #000000;
+    color: #000000;
+    padding: 2px;
+    line-height: 8px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+.navbar {
+    background: linear-gradient(90deg, rgb(253, 192, 127) 0%, rgb(251, 205, 162) 100%);
+    border: 1px solid #000000;
+    border-bottom: 2px solid #000000;
+    height: auto;
+    overflow: auto;
+}
+
+.navbar a {
+    display: grid;
+    color: #000000;
+    padding: 8px;
+    border-top: 2px dashed rgb(0, 0, 0);
+    border-left: 2px dashed rgb(0, 0, 0);
+    border-right: 2px dashed #ff8d5c;
+    border-bottom: 3px dashed #ff0000;
+    text-decoration: none;
+}
+
+
+.navbar a:hover {
+    background-color: #fff4d2;
+}
+
+.navbar a:focus{
+    background-color: #fff4d2;
+}
+
+.navbar a:active {
+    background-color: #34f412;
+    transform: scale(0.98);
+}
+
+
+footer {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #800020;
+    color:#ffea8c;
+}
