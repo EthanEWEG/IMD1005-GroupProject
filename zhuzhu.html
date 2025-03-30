@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/zhuzhu.css">
     <link rel="icon" href="images/zhuzhu/paw.gif">
+    <script src="scripts/zhuzhu.js"></script>
 </head>
 
 <body>
@@ -74,15 +75,23 @@
                         <p>→<a href="https://www.zhuzhupets.com/">ZhuZhu.com</a> // ZhuZhu City!</p>
                         <p>→<a href="https://www.justwatch.com/ca/movie/quest-for-zhu">Quest for Zhu</a> // Movie</p>
                         <p>→<a href="https://officialzhuzhupets.fandom.com/wiki/List_of_Zhu_Zhus">Fandom.com</a> // ZhuZhu Catalog</p>
+                        <p>→<a href="https://www.youtube.com/watch?v=vWmHnSt-wtM">Youtube</a> // ZhuZhu theme song</p>
                     </div>
                 </div>
             </section>
+            <div class="window">
+                <div class="window_tab">
+                    <img class="window_icon" alt="">
+                    <div class="window_title">Music Box</div>
+                    <div class="window_button_display">
+                        <div class="window_buttons">_</div>
+                        <div class="window_buttons">□</div>
+                        <div class="window_buttons">x</div>
+                    </div>
+                </div>
                     <div class="music_box">
                         <iframe width="300" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1484804260&color=%23f2cee2&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-               
-                        <div class="video">
-                          <iframe width="100%" height="150" src="https://www.youtube.com/embed/vWmHnSt-wtM" title="The ZhuZhus | Show Opening Theme!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+        
                 </div>
             </section>
 
@@ -312,7 +321,59 @@
                         </div>
                         <div class="date">
                         </div>
+                        <img src="images/zhuzhu/pink-heart.gif">
                     </div>
+                    <div class="window">
+                        <div class="window_tab">
+                            <div class="window_title">Chat Box</div>
+                            <div class="window_button_display">
+                                <div class="window_buttons">_</div>
+                                <div class="window_buttons">□</div>
+                                <div class="window_buttons">x</div>
+                            </div>
+                                <div class="app">
+                                    <div class="screen join-screen active">
+                                        <div class="form">
+                                            <h2>Join Chatroom</h2>
+                                            <div class="form-input">
+                                                <label>Username</label>
+                                                <input type="text" id="username">
+                                            </div>
+                                            <div class="form-input">
+                                                <button id="join-user">Join</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="screen chat-screen">
+                                        <div class="header">
+                                            <div class="logo">Chatroom</div>
+                                            <button id="exit-chat">Exit</button>
+                                        </div>
+                                        <div class="messages">
+                                            <!--Dummy messages-->
+                                            <div class="message my-message">
+                                                <div>
+                                                    <div class="name">You</div>
+                                                    <div class="text">Hi</div>
+                                                </div>
+                                            </div>
+                                            <div class="update">
+                                                Abc has joined the conversation
+                                            </div>
+                                            <div class="message other-message">
+                                                <div>
+                                                    <div class="name">Abc</div>
+                                                    <div class="text">Hi</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="typebox">
+                                            <input type="text" id="message-input">
+                                            <button id="send-message">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
                 </div>
             </section>
             <section>
@@ -369,76 +430,65 @@
         </aside>
     <footer class="footer">&copy; 2025 Rania Jabi IMD 1005 | All Rights Reserved</footer>
 </div>
+<script src="scripts/zhuzhu.js"></script>
 </body>
 </html>
 
 
 <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const carousel = document.querySelector('.carousel');
-        
-        const images = Array.from(carousel.children);
-        images.forEach(img => {
-            const clone = img.cloneNode(true);
-            carousel.appendChild(clone);
-        });
-    });
 
 
-    const timeElement = document.querySelector(".time");
+const timeElement = document.querySelector(".time");
 const dateElement = document.querySelector(".date");
 
-/**
- * @param {Date} date
- */
-function formatTime(date) {
-  const hours12 = date.getHours() % 12 || 12;
-  const minutes = date.getMinutes();
-  const isAm = date.getHours() < 12;
 
-  return `${hours12.toString().padStart(2, "0")}:${minutes
-    .toString()
-    .padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
+function formatTime(date) {
+const hours12 = date.getHours() % 12 || 12;
+const minutes = date.getMinutes();
+const isAm = date.getHours() < 12;
+
+return `${hours12.toString().padStart(2, "0")}:${minutes
+.toString()
+.padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
 }
 
-/**
- * @param {Date} date
- */
-function formatDate(date) {
-  const DAYS = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
-  const MONTHS = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
 
-  return `${DAYS[date.getDay()]}, ${
-    MONTHS[date.getMonth()]
-  } ${date.getDate()} ${date.getFullYear()}`;
+function formatDate(date) {
+const DAYS = [
+"Sunday",
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday",
+"Saturday"
+];
+const MONTHS = [
+"January",
+"February",
+"March",
+"April",
+"May",
+"June",
+"July",
+"August",
+"September",
+"October",
+"November",
+"December"
+];
+
+return `${DAYS[date.getDay()]}, ${
+MONTHS[date.getMonth()]
+} ${date.getDate()} ${date.getFullYear()}`;
 }
 
 setInterval(() => {
-  const now = new Date();
+const now = new Date();
 
-  timeElement.textContent = formatTime(now);
-  dateElement.textContent = formatDate(now);
+timeElement.textContent = formatTime(now);
+dateElement.textContent = formatDate(now);
 }, 200);
+
 
 </script>

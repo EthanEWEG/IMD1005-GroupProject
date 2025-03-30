@@ -3,6 +3,8 @@
 * {
     box-sizing: border-box;
     cursor: url(../images/zhuzhu/pawprint.png), auto;
+    margin: 0;
+    padding: 0;
 }
 body {
     background-color:#ffe6f6 ;
@@ -12,7 +14,10 @@ body {
 
 }
 .container {
+    cursor: url(../images/zhuzhu/pawprint.png), auto;
+
     display: grid;
+    max-width: 100%;
     justify-content: center;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: auto auto auto;
@@ -20,11 +25,11 @@ body {
         "header header header"
         "sidebar-main content sidebar-secondary"
         "footer footer footer";
-    padding: 50px;
-    margin-right: 5%;
-    margin-left: 5%;
+    padding: 50px;   
+    margin: 0 auto;  
     height: 100vh;
-    cursor: url(../images/zhuzhu/pawprint.png), auto;
+    box-sizing: border-box;  
+    overflow-x: hidden;  
 }
 .header {
     grid-area: header;
@@ -58,23 +63,6 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    .header {
-        padding: 20px;        
-    }
-
-    .header img {
-        align-items: center;
-        object-fit: fill;
-        max-height: 100px;      
-    }
-}
-
-@media (max-width: 480px) {
-    .header img {
-        object-fit: fill;    
-    }
-}
 
 
 .sidebar-main {
@@ -147,64 +135,6 @@ body {
     text-align: center;
     font-size: 1.75em;
 }
-@media screen and (max-width: 768px) {
-    .sidebar-main {
-        width: 100%;
-        min-width: 100%;
-        align-items: center;
-    }
-
-    .window {
-        margin-bottom: 10px;
-        padding: 5px;
-        align-items: center;
-    }
-
-    .window_tab {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 5px;
-        align-items: center;
-    }
-
-    .window_buttons {
-        display: none; 
-        align-items: center;
-    }
-
-    .navbar a {
-        align-items: center;
-    }
-
-
-    .video iframe, .music_box iframe {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .sidebar-main {
-        padding: 0 10px;
-        min-width: 100%;
-        align-items: center;
-    }
-
-    .window_title {
-        font-size: 16px;
-        align-items: center;
-    }
-
-    .navbar a {
-        font-size: 12px;
-        align-items: center;
-    }
-
-    .window_buttons {
-        font-size: 12px;
-        align-items: center;
-    }
-}
 
 
 
@@ -244,19 +174,7 @@ body {
     transition: 0.3s;   
     transform: rotate(10deg)
 }
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .text-content {
-        max-width: 100%;
-    }
-    .image-container img {
-        max-width: 50%;
-        margin-top: 10px;
-    }
-}
+
 
 
 
@@ -309,6 +227,11 @@ body {
 .content {
     grid-area: content;
     background-color: #ddeab5;
+    align-items: center;
+    justify-content: center;   
+    align-items: center;         
+    box-sizing: border-box;     
+    padding: 0; 
 }
 .widget-content {
     justify-content: center;
@@ -470,7 +393,99 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-content {
+        max-width: 100%;
+    }
+    .image-container img {
+        max-width: 50%;
+        margin-top: 10px;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .sidebar-main {
+        width: 100%;
+        min-width: 100%;
+        align-items: center;
+    }
+
+    .window {
+        margin-bottom: 10px;
+        padding: 5px;
+        align-items: center;
+    }
+
+    .window_tab {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+        align-items: center;
+    }
+
+    .window_buttons {
+        display: none; 
+        align-items: center;
+    }
+
+    .navbar a {
+        align-items: center;
+    }
+
+
+    .video iframe, .music_box iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .sidebar-main {
+        padding: 0 10px;
+        min-width: 100%;
+        align-items: center;
+    }
+
+    .window_title {
+        font-size: 16px;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .window_buttons {
+        font-size: 12px;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    .container{
+        padding: 100px;
+        width: 100%;
+    }
+    .header {
+        padding: 20px;        
+    }
+
+    .header img {
+        align-items: center;
+        object-fit: fill;
+        max-height: 100px;      
+    }
+}
+
+@media (max-width: 480px) {
+    .header img {
+        object-fit: fill;    
+    }
+}
 /*
 @media (max-width: 768px) {
     .widget-content {
