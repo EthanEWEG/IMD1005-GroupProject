@@ -28,8 +28,8 @@ tamagotchiBtn.addEventListener("click", function() {
     titleDiv.style.display = "block";
 
     //text updates
-    nameElement.textContent = "name2";
-    textElement.textContent = "bio2";
+    nameElement.textContent = "Yein Han";
+    textElement.textContent = "First year IMD student, want to become a web developer or 3d animation artist. I use my dog as a stress toy :)";
 });
 
 //Kit
