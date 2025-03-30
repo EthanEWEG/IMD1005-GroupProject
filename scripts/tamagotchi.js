@@ -66,9 +66,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 const timeElement = document.querySelector(".time");
 const dateElement = document.querySelector(".date");
 
-/**
- * @param {Date} date
- */
+
 function formatTime(date) {
   const hours12 = date.getHours() % 12 || 12;
   const minutes = date.getMinutes();
@@ -79,9 +77,7 @@ function formatTime(date) {
     .padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
 }
 
-/**
- * @param {Date} date
- */
+
 function formatDate(date) {
   const DAYS = [
     "Sunday",
