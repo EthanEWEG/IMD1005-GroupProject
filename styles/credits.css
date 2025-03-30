@@ -247,7 +247,7 @@ footer{
 }
 
 a:hover, button:hover{
-    cursor: url('/images/hot-wheel/pointer.svg'), auto;
+    cursor: pointer;
 }
 
 a:focus, button:focus{
