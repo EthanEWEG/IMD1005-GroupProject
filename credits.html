@@ -11,59 +11,75 @@
 </head>
 
 <body>
-
     <div class="container">
-        <header>
+        <main>
+            <div class="icons">
+                <button id="hot-wheel">
+                    <img src="/images/index/hotwheel.webp" alt="hot wheel car icon">
+                    <h3>Hot Wheel Credit</h3>
+                </button>
+                <button id="tamagotchi">
+                    <img src="/images/index/tamagotchi.webp" alt="Tamagotchi icon">
+                    <h3>Tamagotchi Credit</h3>
+                </button>
+                <button id="furby">
+                    <img src="/images/index/furby.png" alt="Furby icon">
+                    <h3>Furby Credit</h3>
+                </button>
+                <button id="trashpack">
+                    <img src="/images/index/trashpack.webp" alt="Trashpack icon">
+                    <h3>Trashpack Credit</h3>
+                </button>
+                <button id="zhuzhu">
+                    <img src="/images/index/zhuzhu.png" alt="ZhuZhu icon">
+                    <h3>ZhuZhu Credit</h3>
+                </button>
+            </div>
             <section class="title">
                 <div class="window">
                     <div class="window_tab">
-                        <img class="window_icon" alt="">
                         <div class="window_title">Credits</div>
                         <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
+                            <button class="window_buttons" id="close">_</button>
+                            <button class="window_buttons">□</button>
+                            <button class="window_buttons" id="close">x</button>
                         </div>
+                    </div>
+                    <div class="content">
+                        <h1>Batman (failed to load)</h1>
+                        <p>Failed to load...</p>
                     </div>
                 </div>
             </section>
-        </header>
-        <main>
-            <section class="desktop_icons">
-                <img src="" alt="">
-            </section>
-
-            <!--
-            <section>
-                <div class="window">
-                    <div class="window_tab">
-                        <img class="window_icon" alt="">
-                        <div class="window_title">Links</div>
-                        <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            -->
         </main>
         <footer>
             <section class="task">
                 <div class="window">
                     <div class="window_tab">
-                        <img src="/images/credits/desktop_icon.png" alt="">
-                        <h3>start</h3>
+                        <button class="start-button">
+                            <img src="/images/credits/desktop_icon.png" alt="windows start button, for the nav options">
+                            <h3>start</h3>
+                        </button>
                     </div>
-
                 </div>
+            </section>
+        </footer>
+        <div class="window" id="nav">
+            <div class="window_tab">
+                <div class="window_title">Nav</div>
+            </div>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="zhuzhu-pets.html">ZhuZhu Pets</a>
+                <a href="trash-packs.html">Trash Packs</a>
+                <a href="tamagotchi.html">Tamagotchi</a>
+                <a href="furby.html">Furby</a>
+                <a href="hot-wheels.html">Hot Wheels</a>
+                <a href="credits.html">Credits</a>
+            </div>
+        </div>
     </div>
-    </section>
-    </footer>
-    </div>
-
-    <script src="credits.js"></script>
+    <script src="scripts/credits.js"></script>
 </body>
 
 </html>
