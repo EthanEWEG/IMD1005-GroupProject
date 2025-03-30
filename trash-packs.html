@@ -12,10 +12,11 @@
 
 <body>
   <div class="container">
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
     <header class="header">
       <div class="header_title">
-        <img src="images/trash-pack/header.png" alt="Trash Packs colorful logo with cartoon trash cans and characters"
-          class="header-image">
+        <img src="images/trash-pack/header-banner.webp"
+          alt="Header banner with logo and characters" class="header-image">
       </div>
     </header>
 
@@ -31,12 +32,13 @@
             </div>
           </div>
           <div class="navbar">
-            <a href="#" onmouseover="addParticles(this)">Home</a>
-            <a href="#" onmouseover="addParticles(this)">Rania</a>
-            <a href="#" onmouseover="addParticles(this)">Ryan</a>
-            <a href="#" onmouseover="addParticles(this)">Yein</a>
-            <a href="#" onmouseover="addParticles(this)">Kit</a>
-            <a href="#" onmouseover="addParticles(this)">Ethan</a>
+            <a href="index.html" onmouseover="addParticles(this)">Home</a>
+            <a href="ZhuZhu-Pets.html" onmouseover="addParticles(this)">Rania</a>
+            <a href="trash-packs.html" onmouseover="addParticles(this)">Ryan</a>
+            <a href="tamagotchi.html" onmouseover="addParticles(this)">Yein</a>
+            <a href="furby.html" onmouseover="addParticles(this)">Kit</a>
+            <a href="hot-wheels.html" onmouseover="addParticles(this)">Ethan</a>
+            <a href="credits.html" onmouseover="addParticles(this)">Credits</a>
           </div>
         </div>
       </section>
@@ -85,17 +87,17 @@
             </div>
           </div>
           <div class="widget-content">
-            <marquee id="songTitle" behavior="scroll" direction="left">♫ Trash Rock Anthem ♫</marquee>
+            <marquee id="songTitle" behavior="scroll" direction="left">♫ The Trash Pack Theme Song
+              ♫</marquee>
             <audio id="player" controls>
-              <source src="sound.mp3" type="audio/mpeg">
+              <source src="trash-pack/trash-pack-theme.mp3" type="audio/mpeg">
             </audio>
-            <button onclick="skipTrack()" class="retro-btn">⏭️ Next Track</button>
           </div>
         </div>
       </section>
     </aside>
 
-    <main class="content">
+    <main class="content" id="maincontent">
       <section>
         <div class="window">
           <div class="window_tab">
@@ -108,7 +110,7 @@
           </div>
           <div class="widget-content">
             <div class="hero-section">
-              <img src="images/trash-pack/header.png" alt="Trash Packs main banner showing various trash can characters"
+              <img src="images/trash-pack/header.webp" alt="Trash Packs main banner showing various trash can characters"
                 class="hero-image">
               <div class="hero-text">
                 <h1 id="mainHeader" onclick="animateHeader()">Trash Packs!</h1>
@@ -132,9 +134,9 @@
           </div>
           <div class="widget-content">
             <div class="content-box">
-              <h2>About Trash Packs</h2>
+              <h2 id="skip-to">About Trash Packs</h2>
               <div class="about-content">
-                <img src="images/trash-pack/moose-toys-logo.png" alt="Moose Toys company logo" class="float-right">
+                <img src="images/trash-pack/moose-toys-logo.webp" alt="Moose Toys company logo" class="float-right">
                 <div class="about-text">
                   <p>Created by <strong>Moose Toys</strong> (makers of Shopkins and Grossery Gang), Trash Packs launched
                     in
@@ -167,7 +169,7 @@
                 </div>
               </div>
               <div class="split-image">
-                <img src="images/trash-pack/limited-edition.jpg" alt="Limited edition Trash Packs collection with rare figures">
+                <img src="images/trash-pack/limited-edition.webp" alt="Limited edition Trash Pack">
               </div>
             </div>
           </div>
@@ -213,16 +215,16 @@
             <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
             <div class="carousel-track">
               <div class="carousel-slide active">
-                <img src="images/trash-pack/AstroTrash.png" alt="Astro Trash collection" style="max-height: 350px;">
-                <div class="slide-caption">Astro Trash - Space Series</div>
+                <img src="images/trash-pack/astro-trash.webp" alt="Image of trashpack">
+                <div class="slide-caption">Astro Trash - Series 2</div>
               </div>
               <div class="carousel-slide">
-                <img src="images/trash-pack/JoosedTrash.png" alt="Joosed Trash collection" style="max-height: 350px;">
-                <div class="slide-caption">Joosed Trash - Juice Series</div>
+                <img src="images/trash-pack/joosed-trash.webp" alt="Image of trashpack">
+                <div class="slide-caption">Joosed Trash - Series 2</div>
               </div>
               <div class="carousel-slide">
-                <img src="images/trash-pack/BugTrash.png" alt="Bug Trash collection" style="max-height: 350px;">
-                <div class="slide-caption">Bug Trash - Insect Series</div>
+                <img src="images/trash-pack/bug-trash.webp" alt="Image of trashpack">
+                <div class="slide-caption">Bug Trash - Series 1</div>
               </div>
             </div>
             <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
@@ -250,7 +252,7 @@
               <h2>Main Series Releases</h2>
               <div class="series-grid">
                 <div class="series-card">
-                  <img src="images/trash-pack/series1.jpg" alt="Trash Packs Series 1 original release with green lids">
+                  <img src="images/trash-pack/series1.webp" alt="Trash Packs Series 1">
                   <div class="series-info">
                     <h3>Series 1 (2011)</h3>
                     <p>169 figures across 7 teams</p>
@@ -258,7 +260,7 @@
                   </div>
                 </div>
                 <div class="series-card">
-                  <img src="images/trash-pack/series2.jpg" alt="Trash Packs Series 2 with glow-in-the-dark figures">
+                  <img src="images/trash-pack/series2.webp" alt="Trash Packs Series 2">
                   <div class="series-info">
                     <h3>Series 2 (2012)</h3>
                     <p>Glow-in-the-dark figures</p>
@@ -266,7 +268,7 @@
                   </div>
                 </div>
                 <div class="series-card">
-                  <img src="images/trash-pack/series7.jpg" alt="Trash Packs Series 7 Junk Germs in test tube packaging">
+                  <img src="images/trash-pack/series7.webp" alt="Trash Packs Series 7">
                   <div class="series-info">
                     <h3>Series 7: Junk Germs (2014)</h3>
                     <p>Test tube packaging</p>
@@ -279,19 +281,19 @@
                 <h3>Special Editions:</h3>
                 <div class="edition-grid">
                   <div class="edition-item">
-                    <img src="images/trash-pack/rare-1.jpg" alt="Squish Bone">
+                    <img src="images/trash-pack/rare-1.webp" alt="Squish Bone">
                     <p>Squish Bone</p>
                   </div>
                   <div class="edition-item">
-                    <img src="images/trash-pack/rare-2.jpg" alt="Poop Plop">
+                    <img src="images/trash-pack/rare-2.webp" alt="Poop Plop">
                     <p>Poop Plop</p>
                   </div>
                   <div class="edition-item">
-                    <img src="images/trash-pack/rare-3.jpg" alt="Festering Fowl">
+                    <img src="images/trash-pack/rare-3.webp" alt="Festering Fowl">
                     <p>Festering Fowl</p>
                   </div>
                   <div class="edition-item">
-                    <img src="images/trash-pack/rare-4.jpg" alt="Poo Plumbing">
+                    <img src="images/trash-pack/rare-4.webp" alt="Poo Plumbing">
                     <p>Poo Plumbing</p>
                   </div>
                 </div>
@@ -314,7 +316,7 @@
           <div class="widget-content">
             <div class="split-section">
               <div class="split-image">
-                <img src="images/trash-pack/most-rare.jpg" alt="Most rare trashpacks">
+                <img src="images/trash-pack/most-rare.webp" alt="Most rare trashpacks">
               </div>
               <div class="split-text">
                 <h2>Official Rarity System</h2>
@@ -410,7 +412,8 @@
                 </div>
               </div>
               <div class="split-image">
-                <img src="images/trash-pack/trashpack-variety.jpg" alt="Historical timeline of Trash Packs product evolution">
+                <img src="images/trash-pack/trashpack-variety.webp"
+                  alt="Variety of trashpacks">
               </div>
             </div>
           </div>
@@ -433,7 +436,6 @@
 
               <div class="buy-options">
                 <div class="buy-option">
-                  <img src="images/trash-pack/online-shopping.jpg" alt="Online shopping for Trash Packs">
                   <div class="buy-info">
                     <h3><i class="fas fa-shopping-cart"></i> Online</h3>
                     <ul>
@@ -445,7 +447,6 @@
                 </div>
 
                 <div class="buy-option">
-                  <img src="images/trash-pack/in-store.jpg" alt="Physical stores selling Trash Packs">
                   <div class="buy-info">
                     <h3><i class="fas fa-store"></i> In Person</h3>
                     <ul>
@@ -476,28 +477,28 @@
               <h2>Trash Pack Gallery</h2>
               <div class="image-grid">
                 <div class="grid-item">
-                  <img src="images/trash-pack/trash-grid-1.jpg" alt="Series 1 common figures displayed on white background">
+                  <img src="images/trash-pack/trash-grid-1.webp" alt="Series 1 common figures">
                   <div class="grid-caption">Series 1 Common Figures</div>
                 </div>
                 <div class="grid-item">
-                  <img src="images/trash-pack/trash-grid-2.jpg" alt="Series 2 dumpster playset with opening lid">
+                  <img src="images/trash-pack/trash-grid-2.webp" alt="Series 2">
                   <div class="grid-caption">Series 2 Dumpster Playset</div>
                 </div>
                 <div class="grid-item">
-                  <img src="images/trash-pack/trash-grid-3.jpg" alt="Ultra rare metallic figures shining under light">
-                  <div class="grid-caption">Ultra Rare Metallic Figures</div>
+                  <img src="images/trash-pack/trash-grid-3.webp" alt="Series 2 common figures">
+                  <div class="grid-caption">Series 2 Common Figures</div>
                 </div>
                 <div class="grid-item">
-                  <img src="images/trash-pack/trash-grid-4.jpg" alt="Official Trash Packs trading cards spread out">
-                  <div class="grid-caption">Official Trading Cards</div>
+                  <img src="images/trash-pack/trash-grid-4.webp" alt="Series 4 Rare Figures">
+                  <div class="grid-caption">Series 4 Rare Figures</div>
                 </div>
                 <div class="grid-item">
-                  <img src="images/trash-pack/trash-grid-5.jpg" alt="Comic-Con exclusive limited edition figure">
-                  <div class="grid-caption">2013 Comic-Con Exclusive</div>
+                  <img src="images/trash-pack/trash-grid-5.webp" alt="Series 6 Trash Playset">
+                  <div class="grid-caption">Series 6 Trash Playset</div>
                 </div>
                 <div class="grid-item">
-                  <img src="images/trash-pack/trash-grid-6.jpg" alt="Trashies reboot series with new designs">
-                  <div class="grid-caption">2018 Trashies Reboot</div>
+                  <img src="images/trash-pack/trash-grid-6.webp" alt="Series 3 Packaging">
+                  <div class="grid-caption">Series 3 Packaging</div>
                 </div>
               </div>
             </div>
@@ -531,6 +532,36 @@
     </main>
 
     <aside class="sidebar-secondary">
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Vote!</div>
+          </div>
+          <div class="widget-content">
+            <h3>Weekly Poll</h3>
+            <div class="poll">
+              <p>Which series is your favorite?</p>
+              <div class="poll-options">
+                <label><input type="radio" name="series"> Series 1</label>
+                <label><input type="radio" name="series"> Series 2</label>
+                <label><input type="radio" name="series"> Junk Germs</label>
+              </div>
+              <button class="retro-btn">Vote</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="window">
+          <div class="window_tab">
+            <div class="window_title">Did You Know?</div>
+          </div>
+          <div class="widget-content">
+            <p>Series 2 figures contain special glow-in-the-dark variants!</p>
+          </div>
+        </div>
+      </section>
     </aside>
 
     <footer class="footer">
