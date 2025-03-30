@@ -1,51 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Micro+5+Charted&family=Pixelify+Sans:wght@400..700&display=swap');
 
-
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
 
 body {
     font-family: "Pixelify Sans", sans-serif;
     background-image: url(/images/credits/bg.gif);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     display: grid;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "header header"
-        "main main"
-        "footer footer footer ";
+    place-items: center;
+    grid-template-rows: 1fr auto;
     background-image: url(/images/credits/windows_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 200px;
+    margin: 100px;
     height: 70vh;
+    width: 70vw;
     border: 4px solid #ffffff;
+    position: relative;
+    overflow: hidden;
 }
 
-.header {
-    background-color: rgb(9, 75, 53);
+footer{
+    position: relative;
+    width:100%;
+    z-index: 2;
+}
+
+.main{
+    flex-grow: 1;
 }
 
 .title {
-    display: grid;
+    display: none;
+    position: relative;
+    width: 650px;
+    z-index: 2;
 }
 
 .title .window {
     border: 4px ridge #606060;
-
     overflow: hidden;
-    box-shadow: 0 1px 1px 1px rgba(248, 150, 200, 0.5);
+    box-shadow: 0 1px 1px 1px rgba(163, 163, 163, 0.5);
     background: linear-gradient(180deg,
-            rgb(246, 202, 224) 40%,
-            rgba(226, 117, 236, 0.893) 100%);
+            rgb(197, 197, 197) 40%,
+            rgba(116, 116, 116, 0.893) 100%);
 }
 
 .title .window_tab {
-    text-align: left;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-right: 2px solid #121212;
@@ -54,17 +69,16 @@ body {
     background-color: #9c979d;
 }
 
-
 .title .window_title {
-    display: inline-block;
     color: #191919;
     margin: 1px 1px 5px 5px;
+    padding-left: 5px;
+    flex-grow: 1; 
     font-size: 18px;
     font-weight: bold;
 }
 
 .title .window_button_display {
-    float: right;
     margin-right: 5px;
 }
 
@@ -73,137 +87,226 @@ body {
     border-left: 2px solid white;
     border-bottom: 2px solid #282828;
     border-right: 2px solid #282828;
-    color: #ffffff;
+    background-color: #e5e5e5;
     padding: 2px;
-    line-height: 8px;
-    display: inline-block;
+    line-height: 10px;
     height: 20px;
     width: 20px;
-    text-align: center;
 }
-
 
 .title .window_buttons:hover {
     background-color: rgb(53, 53, 53);
     color: rgb(255, 255, 255);
-
+    cursor:pointer; 
 }
 
-
-.window {
-    border: 4px ridge #606060;
-    overflow: hidden;
-    box-shadow: 0 1px 1px 1px rgba(248, 150, 200, 0.5);
-    background: linear-gradient(180deg,
-            rgb(246, 202, 224) 40%,
-            rgba(226, 117, 236, 0.893) 100%);
-}
-
-.window_tab {
-    text-align: left;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-right: 2px solid #de83e5;
-    border-bottom: 3px solid #de83e5;
-    padding: 1px;
-    background-color: #f7cbfb;
-}
-
-.window_title {
-    display: inline-block;
-    color: #191919;
-    margin: 1px 1px 5px 5px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.window_button_display {
-    float: right;
-    margin-right: 5px;
-}
-
-.window_buttons {
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-bottom: 2px solid #c6397b;
-    border-right: 2px solid #8c2555;
-    color: #e35095;
-    padding: 2px;
-    line-height: 8px;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    text-align: center;
-}
-
-
-.window_buttons:hover {
-    background-color: rgb(207, 87, 193);
+.title .window_buttons:focus {
+    background-color: rgb(53, 53, 53);
     color: rgb(255, 255, 255);
-
 }
 
+.title .window_buttons:active {
+    background-color: rgb(255, 4, 4);
+}
 
-.task {
-    display: grid;
-
+.content{
+    text-align: center;
+    margin: 30px;
 }
 
 .task .window {
     border: 4px ridge #606060;
-
-
     overflow: hidden;
-    box-shadow: 0 1px 1px 1px rgba(248, 150, 200, 0.5);
+    box-shadow: 0 1px 1px 1px rgba(84, 84, 84, 0.5);
     background: linear-gradient(180deg,
             rgb(134, 134, 134) 40%,
             rgba(134, 134, 134, 0.893) 100%);
 }
 
 .task .window_tab {
-    text-align: left;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-right: 2px solid #121212;
-    border-bottom: 3px solid #353535;
+    border-top: 2px solid rgb(134, 134, 134);
+    border-left: 2px solid rgb(134, 134, 134);
+    border-right: 2px solid rgb(134, 134, 134);
+    border-bottom: 3px solid rgb(134, 134, 134);
     padding: 1px;
     background-color: #9c979d;
 }
 
-.task .window_tab h3 {
+.start-button{
     display: flex;
+    justify-content: start;
+    align-items: center;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 5px solid #121212;
+    border-bottom: 6px solid #353535;
+    padding: 1px 10px;
+    background-color: #9c979d;
 }
 
-.task .window_title {
-    display: grid;
-    color: #191919;
+.start-button:hover{
+    cursor:pointer;
+    background-color: #d3d3d3;
+    transform: scale(1.03);
+}
+
+.start-button:focus{
+    background-color: #d3d3d3;
+}
+
+.start-button:active{
+    background-color: #25ff25;
+}
+
+.icons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.icons button{
+    background: transparent;
+    margin: 0 5px;
+    border: none;
+    width: 90px;
+}
+
+.icons button h3{
+    font-size: 18px;
+}
+
+.icons button:hover{
+    cursor:pointer;
+    transform: scale(1.07);
+    background: rgba(232, 232, 232, 0.1);
+    border-radius: 20px;
+}
+
+.icons button:focus{
+    background: rgba(232, 232, 232, 0.3);
+    border-radius: 20px;
+}
+
+.icons button:active{
+    background: rgba(30, 255, 0, 0.3);
+    border-radius: 20px;
+}
+
+
+
+.window {
+    border: 4px ridge #2F2F2F;
+    overflow: hidden;
+    box-shadow: 0 1px 1px 1px rgba(123, 123, 123, 0.5);
+    background: linear-gradient(180deg,
+    rgb(197, 197, 197) 40%,
+    rgba(116, 116, 116, 0.893) 100%);
+    
+}
+
+.window_tab {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-align: left;
+    border: 2px solid #2F2F2F; 
+    border-bottom: 3px solid #2F2F2F ;
+    padding: 1px;
+    background-color: #9c979d;
+}
+
+.window_title {
+    display: inline-block;
+    color: #000000;
     margin: 1px 1px 5px 5px;
     font-size: 18px;
     font-weight: bold;
 }
 
-.task .window_button_display {
-    float: right;
-    margin-right: 5px;
+.navbar {
+    background: linear-gradient(180deg,
+    rgb(197, 197, 197) 40%,
+    rgba(116, 116, 116, 0.893) 100%);
+    border: 1px solid #000000;
+    border-bottom: 2px solid #000000;
+    height: auto;
+    overflow: auto;
 }
 
-.task .window_buttons {
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-bottom: 2px solid #282828;
-    border-right: 2px solid #282828;
-    color: #ffffff;
-    padding: 2px;
-    line-height: 8px;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    text-align: center;
+.navbar a {
+    display: grid;
+    color: #000000;
+    padding: 8px;
+    border-top: 2px dashed rgb(0, 0, 0);
+    border-left: 2px dashed rgb(0, 0, 0);
+    border-right: 2px dashed #e0e0e0;
+    border-bottom: 3px dashed #ffffff;
+    text-decoration: none;
 }
 
+a:hover, button:hover{
+    cursor: url('/images/hot-wheel/pointer.svg'), auto;
+}
 
-.task .window_buttons:hover {
-    background-color: rgb(53, 53, 53);
-    color: rgb(255, 255, 255);
+a:focus, button:focus{
+    background-color: #ffffff;
+}
 
+.navbar a:hover {
+    background-color: #ffffff;
+}
+
+.navbar a:active {
+    background-color: #34f412;
+    transform: scale(0.98);
+}
+
+#nav{
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    display: none;
+    width: 300px;
+    z-index: 1;
+}
+
+@media (max-width: 1100px){
+    .container{
+        margin: 60px;
+        height: 80vh;
+        width: 80vw;
+    }
+    .title {
+        width: 550px;
+    }
+    .icons button{
+        width: 80px;
+    }
+    .icons button h3{
+        font-size: 14px;
+    }
+    #nav{
+        width: 250px;
+    }
+}
+@media (max-width: 700px){
+    .container{
+        margin: 20px;
+        height: 80vh;
+        width: 90vw;
+    }
+    .title {
+        width: 400px;
+    }
+    .icons button{
+        width: 60px;
+    }
+    .icons button h3{
+        font-size: 12px;
+    }
+    #nav{
+        width: 200px;
+    }
 }
