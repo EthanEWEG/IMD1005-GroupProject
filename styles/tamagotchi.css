@@ -19,12 +19,42 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header header header"
-        "sidebar-main content sidebar-secondary"
+        "sidebar_main content sidebar_secondary"
         "footer footer footer";
     padding: 50px;
-    margin-right: 5%;
-    margin-left: 5%;
-    height: 100vh;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    justify-self: center;
+    background: #de83e5;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    transition: transform 1.3s ease-in-out;
+}
+
+.skip-link:focus {
+    top: 10px;
+    outline: solid rgb(180, 0, 135);
+}
+
+.skip-link:focus {
+    margin-top: 20px;
+}
+
+.skip-link:hover {
+    background-color: #f6ace3;
+}
+
+.skip-link:active {
+    background-color: #db5ea3;
 }
 
 .header {
@@ -48,8 +78,8 @@ body {
     width: 100%;
 }
 
-.sidebar-main {
-    grid-area: sidebar-main;
+.sidebar_main {
+    grid-area: sidebar_main;
     background-color: #de83e5;
 }
 
@@ -85,12 +115,12 @@ body {
 }
 
 .window_button_display {
-    display: inline-block;
     float: right;
     margin-right: 5px;
 }
 
 .window_buttons {
+    cursor: url(/images/tamagotchi/pointer_cursor.png), auto;
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-bottom: 2px solid #c6397b;
@@ -104,13 +134,24 @@ body {
     text-align: center;
 }
 
-.sidebar-main .navbar {
+.window_buttons .active {
+    background-color: #de83e5;
+    color: white;
+}
+
+.window_buttons:hover:not(.active) {
+    background-color: #ea33a1;
+    color: white;
+}
+
+.sidebar_main .navbar {
     background: linear-gradient(90deg, rgba(255, 218, 237, 1) 0%, rgba(255, 247, 251, 1) 100%);
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
     border-bottom: 2px solid #c6397b;
     height: auto;
+    width: 100%;
     overflow: auto;
 }
 
@@ -137,7 +178,8 @@ body {
 
 .music_box {
     display: grid;
-    height: 25vh;
+    height: 240px;
+    width: 100%;
 }
 
 .music_box .iframe {
@@ -168,12 +210,13 @@ body {
 
 .memory-game {
     width: 890px;
-    height: 540px;
+    height: 560px;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
     padding: 10px;
     justify-content: center;
+    cursor: url(/images/tamagotchi/pointer_cursor.png), auto;
 }
 
 .memory-card {
@@ -206,6 +249,7 @@ body {
     border-radius: 5px;
     background: #fff8c1;
     backface-visibility: hidden;
+    cursor: url(/images/tamagotchi/pointer_cursor.png), auto;
 }
 
 .front-face {
@@ -228,17 +272,53 @@ body {
     box-shadow: 0 25px 20px rgba(46, 3, 29, 0.447);
 }
 
-.sidebar-secondary {
-    grid-area: sidebar-secondary;
+.sidebar_secondary {
+    grid-area: sidebar_secondary;
     display: grid;
     justify-content: center;
     background-color: #de83e5;
 }
 
+
+.time_container {
+    display: grid;
+    justify-content: center;
+    font-size: 9px;
+    padding: 24px;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.time {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    font-size: 3em;
+    color: #e35095;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.75em;
+}
+
 .gif_images {
     display: grid;
-    padding-top: 50px;
-    padding-bottom: 25px;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 55px;
+    width: 100%;
+}
+
+.gif_images img {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .footer {
@@ -248,25 +328,70 @@ body {
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    color: rgb(243, 77, 176);
+    color: rgb(252, 230, 89);
     background-color: rgb(129, 202, 236);
-    font-size: 18px;
+    font-size: 1.75em;
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1500px) {
     .container {
-        grid-template-rows: 50px 50px 1fr 50px 50px;
-        grid-template-columns: 1fr;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header header"
+            "sidebar_main content sidebar_secondary"
+            "footer footer footer";
+        padding: 50px;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .window_button_display {
+        float: right;
+
+    }
+
+    .window_buttons {
+        cursor: url(/images/tamagotchi/pointer_cursor.png), auto;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-bottom: 2px solid #c6397b;
+        border-right: 2px solid #8c2555;
+        color: #e35095;
+        padding: 2px;
+        line-height: 8px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .container {
+        grid-template-rows: auto;
+        justify-content: center;
+        grid-template-columns: auto;
         grid-template-areas:
             "header"
             "header"
-            "sidebar-main"
+            "sidebar_main"
             "content"
             "content"
             "content"
-            "sidebar-secondary"
+            "sidebar_secondary"
             "footer";
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+
+    }
+
+    .sidebar_main {
+        grid-template-columns: 1fr;
     }
 
     .memory-game {
@@ -314,5 +439,72 @@ body {
         100% {
             transform: translateX(-100%);
         }
+    }
+
+    .gif_images {
+        width: 100%;
+    }
+}
+
+/*---Mobile----*/
+
+@media (max-width: 550px) {
+    .container {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "sidebar_main"
+            "content"
+            "sidebar_secondary"
+            "footer";
+    }
+
+    .content {
+        grid-template-columns: 300px;
+    }
+
+    .music_box {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+    }
+
+    .responsive_iframe_music {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .memory-game {
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: 440px;
+    }
+
+    .video_container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+    }
+
+    .responsive_iframe_tv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer p {
+        font-size: 20px;
     }
 }

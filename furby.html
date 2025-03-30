@@ -11,21 +11,20 @@
 <body>
     <div class="container">
         <header class="header">
-            <div class="header_title">
+            <div class="header-title">
                 <img src="/images/furby/header-100.gif" alt="header title">
             </div>
         </header>
 
         <aside class="sidebar-main">
-            <section>
+            <section id="navbar">
                 <div class="window">
-                    <div class="window_tab">
-                        <img class="window_icon" alt="">
-                        <div class="window_title">Nav</div>
-                        <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
+                    <div class="window-tab">
+                        <div class="window-title">Nav</div>
+                        <div class="window-button-display">
+                            <div class="window-buttons">_</div>
+                            <div class="window-buttons">□</div>
+                            <div class="window-buttons">x</div>
                         </div>
                     </div>
                     <div class="navbar">
@@ -39,18 +38,18 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="music">
                 <div class="window">
-                    <div class="window_tab">
-                        <img class="window_icon" alt="">
-                        <div class="window_title">Music</div>
-                        <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
+                    <div class="window-tab">
+                        <img class="window-icon" alt="">
+                        <div class="window-title">Music</div>
+                        <div class="window-button-display">
+                            <div class="window-buttons">_</div>
+                            <div class="window-buttons">□</div>
+                            <div class="window-buttons">x</div>
                         </div>
                     </div>
-                    <div class="music_box">
+                    <div class="music-box">
                         <iframe width="100%" height="340px" allow="autoplay"
                             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1993063140&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                     </div>
@@ -59,71 +58,169 @@
 
         </aside>
         <main class="content">
-            <section id="intro">
-                <div class="window">
-                    <div class="window_tab">
-                        <img class="window_icon" alt="">
-                        <div class="window_title">Rediscover FURBY! </div>
-                        <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
+
+            <section id="welcome">
+                <div class="window" id="welc">
+                    <div class="window-tab">
+                        <div class="window-title">Welcome@Furby.com </div>
+                        
+                        <div class="window-button-display">
+                            <div class="window-buttons">_</div>
+                            <div class="window-buttons">□</div>
+                            <div class="window-buttons">x</div>
                         </div>
                     </div>
-                    <div class="article_title">
-                        <h1>Furby: Since 1998</h1>
-                    </div>
-                    <div class="article_paragraph">
-                        <p>I had begged my parents for furby when I was younger, and it was something I was obsessed with. Revisiting it now, I am remembering the reasons why! Furby was a one-of-a-kind toy, especially for its time, because of its unique characteristics and features. This article describes Furby as a brand, alongside the broad range of Furby products and merchandise. </p>
-                    </div>
-                    <div class="article_image">
-                        <img src="" alt="">
+
+                    <div class="window-content" id="welc-content">
+                        <p>Welcome to the world of Furby! Inspired by the success of Tamagotchis and Giga Pets, the creators of Furby - Dave Hampton & Caleb Chung - wanted to create a new kind of virtual pet: a completely interactive animatronic pet that could talk, sing, & dance. Furby “pets” are an iconic and memorable part of many who grew up in the 2000s, myself included. </p>
+
+                        <img class="float" id="welc-right" src="https://dummyimage.com/200x200/000/fff">
+
+
                     </div>
                 </div>
+
+                
             </section>
 
-            <section id="beginnings">
+            <section id="timeline">
                 <div class="window">
-                    <div class="window_tab">
-                        <img class="window_icon" alt="">
-                        <div class="window_title">Origins </div>
-                        <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
+                    <div class="window-tab">
+                        <div class="window-title">Timeline@Furby.com </div>
+                        
+                        <div class="window-button-display">
+                            <div class="window-buttons">_</div>
+                            <div class="window-buttons">□</div>
+                            <div class="window-buttons">x</div>
                         </div>
                     </div>
-                    <div class="article_title">
-                        <h1>Furby's beginnings</h1>
+
+                    <div class="window-content">
+                        <div class="timeline">
+                            <div class="timeline-empty">
+                                <img src="https://dummyimage.com/100x100/000/fff">
+                                <img src="https://dummyimage.com/100x100/000/fff">
+                            </div>
+                  
+                            <div class="timeline-middle">
+                                 <div class="timeline-circle"></div>
+                            </div>
+                                 
+                            <div class="timeline-component timeline-content">
+                                 <h3>Era 1 (1998-2002)</h3>
+                                 <p><u>Owned by:</u> Tiger Electronics <br>
+                                    <u>Furby Lines:</u> Furby (1998) Adult, Furby (1999) Babies. <br>
+                                    <i>*Also released Furby Friends </i></p>
+                            </div>
+
+                            <div class="timeline-component timeline-content">
+                                 <h3>Era 2 (2005-2007)</h3>
+                                 <p><u>Owned by:</u> Hasbro <br>
+                                    <u>Furby Lines:</u> Emoto-Tronic Furby Adult/Furby (2005) Adult, Funky Furbys, Emoto-Tronic Furby Babies.</p>
+                            </div>
+
+                            <div class="timeline-middle">
+                                 <div class="timeline-circle"></div>
+                            </div>
+
+                            <div class="timeline-empty"></div>
+                  
+                            <div class="timeline-empty"></div>
+                  
+                            <div class="timeline-middle">
+                                <div class="timeline-circle"></div>
+                             </div>
+
+                             <div class="timeline-component timeline-content">
+                                <h3>Era 3 (2012-2015)</h3>
+                                <p><u>Owned by:</u> Hasbro <br>
+                                    <u>Furby Lines:</u> Furby (2012) Adult, Furby Boom, Furby Furblings. <br>
+                                   <i> *Also released Furby Friends</i></p>
+                           </div>
+
+                           <div class="timeline-component timeline-content">
+                                <h3>Era 4 (2016) </h3>
+                                <p><u>Owned by:</u> Hasbro <br>
+                                    <u>Furby Lines:</u> Furby Connect.</p>
+                           </div>
+                           <div class="timeline-middle">
+                                 <div class="timeline-circle"></div>
+                            </div>
+
+                            <div class="timeline-empty"></div>
+                  
+                            <div class="timeline-empty"></div>
+                  
+                            <div class="timeline-middle">
+                                <div class="timeline-circle"></div>
+                             </div>
+
+                             <div class="timeline-component timeline-content">
+                                <h3>Era 5 (2023-present)</h3>
+                                <p><u>Owned by:</u> Hasbro <br>
+                                    <u>Furby Lines:</u> Furby (2023), Furby Furblets, DJ Furby, DJ Furby Furblets <br>
+                                   <i> *note: DJ Furbies are yet to be released.</i></p>
+                           </div>
+
+                           
+                  
+                         </div>
+                       
                     </div>
-                    <div class="article_paragraph">
-                        <p>I had begged my parents for furby when I was younger, and it was something I was obsessed with. Revisiting it now, I am remembering the reasons why! Furby was a one-of-a-kind toy, especially for its time, because of its unique characteristics and features. This article describes Furby as a brand, alongside the broad range of Furby products and merchandise. </p>
+                </div> 
+            </section>
+
+            <section id="era-1">
+                <div class="window">
+                    <div class="window-tab">
+                        <div class="window-title">Era-1@Furby.com </div>
+                    
+                        <div class="window-button-display"></div>
+                        <div class="window-buttons">_</div>
+                        <div class="window-buttons">□</div>
+                        <div class="window-buttons">x</div>
                     </div>
-                    <div class="article_image">
-                        <img src="" alt="">
+
+                    <div class="window-content">
+                        <p>Era 1 (1998-2002) had the Furby Adult (1998) & Furby Babies (1999) lines of Furbies. They also released some Furby Friends in this Era. </p>
+                        <div class="line-info">
+                            <h3>Furby Adult (1998)</h3>
+                            <ul>
+                                <li>Tickle, tilt & light sensor</li>
+                                <li> Infrared port</li>
+                                <li> No app/voice-recognition</li>
+                                <li>Sensitive & Friendly personalities</li>
+                                <li>Likes to dance, hug, get tickled, & have their backs rubbed.</li>
+                            </ul>
+                        </div>
+
+                        <div class="line-info">
+                            <h3>Furby Babies (1999)</h3>
+                            <ul>
+                                <li>Smaller size than Furby Adult (1998)</li>
+                                <li>Learns non-furbish pre-set language quicker than Furby Adult (1998)</li>
+                                <li>Higher-pitched voice compared to Furby Adult (1998)</li>
+                                <li>Unable to dance</li>
+                                <li>White eyelashes</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="eras">
                 <div class="window">
-                    <div class="window_tab">
-                        <img class="window_icon" alt="">
-                        <div class="window_title">Eras</div>
-                        <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
+                    <div class="window-tab">
+                        <div class="window-title">Furby-1998@Furby.com </div>
+                    
+                        <div class="window-button-display"></div>
+                        <div class="window-buttons">_</div>
+                        <div class="window-buttons">□</div>
+                        <div class="window-buttons">x</div>
+                    </div>
+
+                    <div class="image-gallery">
+                        <div class="slide">
+                            
                         </div>
-                    </div>
-                    <div class="article_title">
-                        <h1>Furby through the years</h1>
-                    </div>
-                    <div class="article_paragraph">
-                        <p>The Furby production timeline is broken up into 5 eras, each consisting multiple generations, prototypes, specialties and more. Here, we dive into galleries seperated by eras. Note that this gallery is inconclusive, and is not a complete list of all discovered Furby designs.  </p>
-                    </div>
-                    <div class="article_image">
-                        <img src="" alt="">
                     </div>
                 </div>
             </section>
@@ -132,31 +229,14 @@
         <aside class="sidebar-secondary">
             <section>
                 <div class="window">
-                    <div class="window_tab">
-                        <img class="window_icon" alt="">
-                        <div class="window_title">Versions</div>
-                        <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
+                    <div class="window-tab">
+                        <div class="window-title">✮⋆˙</div>
+                        <div class="window-button-display">
+                            <div class="window-buttons">_</div>
+                            <div class="window-buttons">□</div>
+                            <div class="window-buttons">x</div>
                         </div>
                     </div>
-                    <img src="/images/tamagotchi/music_cover.jpg" alt="">
-                </div>
-            </section>
-            <section>
-                <div class="window">
-                    <div class="window_tab">
-                        <img class="window_icon" alt="">
-                        <div class="window_title">Links</div>
-                        <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
-                        </div>
-                    </div>
-                    <P>CUTE Music cover hehehehhehhehhehebee</P>
-                    <img src="images/tamagotchi/music_cover.jpg" alt="">
                 </div>
             </section>
         </aside>

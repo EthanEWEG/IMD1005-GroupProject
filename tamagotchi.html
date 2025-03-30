@@ -12,17 +12,17 @@
 
 <body>
     <div class="container">
+        <a href="#skip-start" class="skip-link">Skip to main content</a>
         <header class="header">
             <div class="header_title">
                 <img src="/images/tamagotchi/header.gif" alt="header title">
             </div>
         </header>
 
-        <aside class="sidebar-main">
+        <aside class="sidebar_main">
             <section>
                 <div class="window">
                     <div class="window_tab">
-                        <img class="window_icon" alt="">
                         <div class="window_title">Nav</div>
                         <div class="window_button_display">
                             <div class="window_buttons">_</div>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="navbar">
                         <a href="index.html"><img src="" alt="">Home</a>
-                        <a href="ZhuZhu-Pets.html">ZhuZhu Pets</a>
+                        <a href="zhuzhu-pets.html">ZhuZhu Pets</a>
                         <a href="trash-packs.html">Trash Packs</a>
                         <a href="tamagotchi.html">Tamagotchi</a>
                         <a href="furby.html">Furby</a>
@@ -45,7 +45,6 @@
             <section>
                 <div class="window">
                     <div class="window_tab">
-                        <img class="window_icon" alt="">
                         <div class="window_title">Links</div>
                         <div class="window_button_display">
                             <div class="window_buttons">_</div>
@@ -58,12 +57,11 @@
                             <a href="https://tamagotchi-official.com/gb/series/connection/"><img
                                     src="/images/tamagotchi/link_1.gif" alt="link 1"></a>
                             <a href="https://www.bandai.com/brands/tamagotchi/tamagotchi-pix"><img
-                                    src="/images/tamagotchi/link_2.png" alt="link 1"></a>
+                                    src="/images/tamagotchi/link_2.png" alt="link 2"></a>
                             <a href="https://tamagotchi-official.com/us/series/uni/"><img
-                                    src="/images/tamagotchi/link_3.png" alt="link 1"></a>
-
+                                    src="/images/tamagotchi/link_3.png" alt="link 3"></a>
                             <a href="https://toy.bandai.co.jp/series/tamagotchi/smart/"><img
-                                    src="/images/tamagotchi/link_4.png" alt="link 5"></a>
+                                    src="/images/tamagotchi/link_4.png" alt="link 4"></a>
                             <a href="https://tamagotchi-official.com/gb/series/connection/"><img
                                     src="/images/tamagotchi/link_5.gif" alt="link 5"></a>
                         </div>
@@ -74,7 +72,6 @@
             <section>
                 <div class="window">
                     <div class="window_tab">
-                        <img class="window_icon" alt="">
                         <div class="window_title">Music Box</div>
                         <div class="window_button_display">
                             <div class="window_buttons">_</div>
@@ -83,17 +80,17 @@
                         </div>
                     </div>
                     <div class="music_box">
-                        <iframe width="100%" height="340px" allow="autoplay"
+                        <iframe class="responsive_iframe_music" width="100%" height="340px" allow="autoplay"
                             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1992502452&color=%23f5a2dc&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                     </div>
                 </div>
             </section>
         </aside>
-        <main class="content">
+
+        <main class="content" id="skip-start">
             <section>
                 <div class="window">
                     <div class="window_tab">
-                        <img class="window_icon" alt="">
                         <div class="window_title">Memory Game</div>
                         <div class="window_button_display">
                             <div class="window_buttons">_</div>
@@ -164,7 +161,6 @@
             <section>
                 <div class="window">
                     <div class="window_tab">
-                        <img class="window_icon" alt="">
                         <div class="window_title">Tama Toons</div>
                         <div class="window_button_display">
                             <div class="window_buttons">_</div>
@@ -174,7 +170,7 @@
                     </div>
                     <div class="video_container">
                         <div class="video_toons">
-                            <iframe width="560" height="320"
+                            <iframe class="responsive_iframe_tv" width="560" height="320"
                                 src="https://www.youtube.com/embed/0mshxR9s1ls?si=v2Smgcrc9bZ1DBRE"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -184,11 +180,28 @@
             </section>
 
         </main>
-        <aside class="sidebar-secondary">
+        <aside class="sidebar_secondary">
             <section>
                 <div class="window">
                     <div class="window_tab">
-                        <img class="window_icon" alt="">
+                        <div class="window_title">Time</div>
+                        <div class="window_button_display">
+                            <div class="window_buttons">_</div>
+                            <div class="window_buttons">□</div>
+                            <div class="window_buttons">x</div>
+                        </div>
+                    </div>
+                    <div class="time_container">
+                        <div class="time">
+                        </div>
+                        <div class="date">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="window">
+                    <div class="window_tab">
                         <div class="window_title">Gifs</div>
                         <div class="window_button_display">
                             <div class="window_buttons">_</div>
@@ -197,11 +210,10 @@
                         </div>
                     </div>
                     <div class="gif_images">
-                        <img src="/images/tamagotchi/pets_1.gif" alt="mametchi">
-                        <img src="/images/tamagotchi/pets_2.gif" alt="tarakotchi">
-                        <img src="/images/tamagotchi/pets_3.gif" alt="zukitchi">
-                        <img src="/images/tamagotchi/pets_4.gif" alt="hashizotchi">
-                        <img src="/images/tamagotchi/pets_5.gif" alt="pochitchi">
+                        <img src="/images/tamagotchi/pets_1.gif" alt="gif 1">
+                        <img src="/images/tamagotchi/pets_2.gif" alt="gif 2">
+                        <img src="/images/tamagotchi/pets_3.gif" alt="gif 3">
+                        <img src="/images/tamagotchi/pets_4.gif" alt="gif 4">
                     </div>
                 </div>
             </section>
