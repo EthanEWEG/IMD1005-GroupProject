@@ -248,8 +248,6 @@ function toggleTheme() {
     const player = document.getElementById('player');
     if (player) player.src = tracks[currentTrack].src;
     
-    const skipBtn = document.querySelector('button[onclick="skipTrack()"]');
-    if (skipBtn) skipBtn.addEventListener('click', skipTrack);
     
     if (slides.length > 0) {
       const prevBtn = document.querySelector('.carousel-btn.prev');
