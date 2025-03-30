@@ -2,12 +2,13 @@
 
 * {
     box-sizing: border-box;
-    cursor: url(images/zhuzhu/zhuzhu_cursor.png), auto;
+    cursor: url(../images/zhuzhu/pawprint.png), auto;
 }
 body {
     background-color:#ffe6f6 ;
     background-size: contain;
     font-family: "Pixelify Sans", sans-serif;
+    cursor: url(../images/zhuzhu/pawprint.png), auto;
 
 }
 .container {
@@ -23,19 +24,20 @@ body {
     margin-right: 5%;
     margin-left: 5%;
     height: 100vh;
+    cursor: url(../images/zhuzhu/pawprint.png), auto;
 }
 .header {
     grid-area: header;
     display: flex;
-    flex-direction: column;   /* Stack content vertically */
-    align-items: center;      /* Center horizontally */
+    flex-direction: column;  
+    align-items: center;     
     justify-content: center; 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     outline-style: dotted;
     outline-width: 3px;
     outline-color: azure;
-    background-image: url(images/zhuzhu/zhuzhu_pets_banner.jpg);
+    background-image: url(../images/zhuzhu/zhuzhu_pets_banner.jpg);
     background-size: contain;
     width: 100%;
     margin: 0 auto;   
