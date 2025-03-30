@@ -22,8 +22,8 @@ h1, h2{
     outline: solid rgb(208, 255, 0);
 }
 
-.skip-link:focus + nav {
-    margin-top: 40px;
+.skip-link:focus {
+    margin-top: 20px;
 }
 
 .skip-link:hover{

@@ -57,22 +57,24 @@
                             <div class="window_buttons">x</div>
                         </div>
                     </div>
-                    <div class="light-mode">
-
+                    <div class="theme">
+                        <button class="theme-dark-btn">Dark Mode</button>
+                        <button class="theme-light-btn">Light Mode</button>
                     </div>
                 </div>
                 <div class="window">
                     <div class="window_tab">
                         <img class="window_icon" alt="">
                         <div class="window_title">Visitors</div>
-                        <div class="window_button_display">
+                        <div class="window_button_display" id="hide-btns">
                             <div class="window_buttons">-</div>
                             <div class="window_buttons">□</div>
                             <div class="window_buttons">x</div>
                         </div>
                     </div>
                     <div class="visitor-count">
-
+                        <h3>Page visits: <span id="visitorCounter">0000</span></h3>
+                        <p>Since 2005!</p>
                     </div>
                 </div>
             </div>
@@ -80,15 +82,17 @@
                 <div class="window">
                     <div class="window_tab">
                         <img class="window_icon" alt="">
-                        <div class="window_title">Hot Wheels RACE</div>
+                        <div class="window_title">Hot Wheels GAME</div>
                         <div class="window_button_display">
                             <div class="window_buttons">-</div>
                             <div class="window_buttons">□</div>
                             <div class="window_buttons">x</div>
                         </div>
                     </div>
-                    <div class="game">
-                        
+                    <div class="game-container">
+                        <button id="play-button">Play</button>
+                        <canvas id="game-canvas"></canvas>
+                        <div id="score-tracker">Score: 0</div>
                     </div>
                 </div>
                 <div class="content-container">
@@ -96,7 +100,7 @@
                         <div class="window_tab">
                             <img class="window_icon" alt="">
                             <div class="window_title">What Are Hotwheels?</div>
-                            <div class="window_button_display">
+                            <div class="window_button_display" id="hide-btns">
                                 <div class="window_buttons">-</div>
                                 <div class="window_buttons">□</div>
                                 <div class="window_buttons">x</div>
@@ -123,7 +127,8 @@
                 </div>
             </div>
         </main>
-        <footer>Created by Ethan Egerton-Graham</footer>
+        <footer><p>Created by Ethan Egerton-Graham</p></footer>
     </div>
+    <script src="scripts/hot-wheels.js"></script>
 </body>
 </html>
