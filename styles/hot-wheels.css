@@ -100,21 +100,30 @@ main{
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
 }
 
 .sidebar-main {
-    background-color: #2F2F2F ;
+    border: 4px ridge #000000;
+    background: #c4721a;
+    min-height: 100%;
+}
+
+.main-content{
+    border: 4px ridge #000000;
+    background: #c4721a;
+    min-height: 100%;
 }
 
 .window {
-    border: 4px ridge #2F2F2F  ;
+    border: 4px ridge #2F2F2F;
     overflow: hidden;
     box-shadow: 0 1px 1px 1px rgba(248, 189, 150, 0.5);
     background: linear-gradient(180deg,
     #ff9320 40%,
-    #a05c14 100%);
+    #c4721a 100%);
+    min-height:100%;
 }
 
 .window_tab {
@@ -194,7 +203,7 @@ a:focus, button:focus{
 .theme{
     display: flex;
     flex-wrap: wrap;
-    padding: 10% 5%;
+    padding: 20% 5%;
     justify-content: center;
     align-content: center;
     gap: 10px;
@@ -250,7 +259,7 @@ a:focus, button:focus{
     color:rgb(206, 206, 206);
 }
 
-.navbar, button, a, p, h3, .window_title{
+.navbar, button, a, p, h3, .window_title, h2{
     position: relative;
     z-index: 1000; 
     mix-blend-mode: transparent; 
@@ -267,7 +276,7 @@ a:focus, button:focus{
     color:black;
 }
 
-.dark-mode p, .dark-mode h3, .dark-mode a, .dark-mode button, .dark-mode .window_title{
+.dark-mode p, .dark-mode h3, .dark-mode a, .dark-mode button, .dark-mode .window_title, .dark-mode h2{
     color:rgb(206, 206, 206);
 }
 
@@ -348,6 +357,40 @@ canvas {
     background-color: #34f412;
 }
 
+h2{
+    font-family: 'Lucida Console', 'Courier New', monospace;
+    text-decoration: underline;
+}
+
+.content1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+.content1 img{
+    border-radius: 50px;
+    margin: 8% 0;
+    border: 3px solid #000;
+}
+
+.content2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    gap: 20px;
+}
+
+.content2 img{
+    width: 75%;
+    border-radius: 50px;
+    border: 3px dashed #000;
+}
+
+
+
 .skip-link:focus {
     outline: solid rgb(208, 255, 0);
     background: #AA151B;
@@ -374,6 +417,9 @@ footer {
 }
 
 @media (max-width: 1100px) { 
+    .content-container{
+        grid-template-columns:1fr;
+    }
     #hide-btns {
         display: none; 
     }
