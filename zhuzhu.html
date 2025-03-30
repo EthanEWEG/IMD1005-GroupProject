@@ -52,12 +52,6 @@
                             <div class="window_buttons">x</div>
                         </div>
                     </div>
-                    <div class="music_box">
-                        <iframe width="100%" height="210px" allow="autoplay" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1297614457&color=%23f2cee2&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/fabiola-madia" title="☮︎☠︎︎ 𝙨𝙤𝙘𝙞𝙚𝙩𝙮 𝙙𝙚𝙨𝙩𝙧𝙤𝙮𝙚𝙧 ☠︎︎☮︎" target="_blank" style="color: #cccccc; text-decoration: none;"></a> · <a href="https://soundcloud.com/fabiola-madia/moseni-lotus-yume-2kki-ost" title="★moseni_lotus /Yume 2kki (lotus waters sped up)★" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
-               
-                        <div class="video">
-                          <iframe width="100%" height="150" src="https://www.youtube.com/embed/vWmHnSt-wtM" title="The ZhuZhus | Show Opening Theme!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
                     <div class="scroll-box">
                         <h2>ZHUZHU GAMES!</h2>
                         <h3>ZhuZhu Pets (2010)</h3>
@@ -81,6 +75,14 @@
                         <p>→<a href="https://www.justwatch.com/ca/movie/quest-for-zhu">Quest for Zhu</a> // Movie</p>
                         <p>→<a href="https://officialzhuzhupets.fandom.com/wiki/List_of_Zhu_Zhus">Fandom.com</a> // ZhuZhu Catalog</p>
                     </div>
+                </div>
+            </section>
+                    <div class="music_box">
+                        <iframe width="300" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1484804260&color=%23f2cee2&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+               
+                        <div class="video">
+                          <iframe width="100%" height="150" src="https://www.youtube.com/embed/vWmHnSt-wtM" title="The ZhuZhus | Show Opening Theme!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                 </div>
             </section>
 
@@ -295,12 +297,24 @@
                     <img src="/images/zhuzhu/ZhuZhu_gif.webp" alt="ZhuZhu pet gif" width="100%">
                 </div>
             </section>
-            <div class="scroll-box">
-                <h2>ZhuZHu Movies</h2>
-                <p>→ Quest for Zhu (2011)</p>
-                <p>→ The Power of Zhu (2012)</p>
-                <img src="images/zhuzhu/pink-heart.gif" width="120px">
-            </div>
+            <section>
+                <div class="window">
+                    <div class="window_tab">
+                        <div class="window_title">Time</div>
+                        <div class="window_button_display">
+                            <div class="window_buttons">_</div>
+                            <div class="window_buttons">□</div>
+                            <div class="window_buttons">x</div>
+                        </div>
+                    </div>
+                    <div class="time_container">
+                        <div class="time">
+                        </div>
+                        <div class="date">
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section>
                 <div class="window">
                     <div class="window_tab">
@@ -369,4 +383,62 @@
             carousel.appendChild(clone);
         });
     });
+
+
+    const timeElement = document.querySelector(".time");
+const dateElement = document.querySelector(".date");
+
+/**
+ * @param {Date} date
+ */
+function formatTime(date) {
+  const hours12 = date.getHours() % 12 || 12;
+  const minutes = date.getMinutes();
+  const isAm = date.getHours() < 12;
+
+  return `${hours12.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
+}
+
+/**
+ * @param {Date} date
+ */
+function formatDate(date) {
+  const DAYS = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  const MONTHS = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+
+  return `${DAYS[date.getDay()]}, ${
+    MONTHS[date.getMonth()]
+  } ${date.getDate()} ${date.getFullYear()}`;
+}
+
+setInterval(() => {
+  const now = new Date();
+
+  timeElement.textContent = formatTime(now);
+  dateElement.textContent = formatDate(now);
+}, 200);
+
 </script>
