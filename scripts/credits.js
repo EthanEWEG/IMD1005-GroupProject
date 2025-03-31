@@ -46,8 +46,8 @@ trashpackBtn.addEventListener("click", function() {
     titleDiv.style.display = "block";
 
     //text updates
-    nameElement.textContent = "name4";
-    textElement.textContent = "bio4";
+    nameElement.textContent = "Ryan Swanson";
+    textElement.textContent = "First year IMD student, pursuing career in sports media and design. I played lacrosse for Team Canada!";
 });
 
 //Rania
