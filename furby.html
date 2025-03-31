@@ -6,6 +6,8 @@
     <title>Furby</title>
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/furby.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="furby.js"></script>
     <link rel="icon" href="/images/furby/furby-favicon.jpeg">
 </head>
 <body>
@@ -29,7 +31,7 @@
                     </div>
                     <div class="navbar">
                         <a href="index.html"><img src="" alt="">Home</a>
-                        <a href="zhuzhu.html">ZhuZhu Pets</a>
+                        <a href="zhuzhu-pets.html">ZhuZhu Pets</a>
                         <a href="trash-packs.html">Trash Packs</a>
                         <a href="tamagotchi.html">Tamagotchi</a>
                         <a href="furby.html">Furby</a>
@@ -72,9 +74,11 @@
                     </div>
 
                     <div class="window-content" id="welc-content">
+                        <img class="welc-img" id="welc-left" src="/images/furby/welc-left-100.png">
+
                         <p>Welcome to the world of Furby! Inspired by the success of Tamagotchis and Giga Pets, the creators of Furby - Dave Hampton & Caleb Chung - wanted to create a new kind of virtual pet: a completely interactive animatronic pet that could talk, sing, & dance. Furby “pets” are an iconic and memorable part of many who grew up in the 2000s, myself included. </p>
 
-                        <img class="float" id="welc-right" src="https://dummyimage.com/200x200/000/fff">
+                        <img class="welc-img" id="welc-right" src="/images/furby/welc-right-100.png">
 
 
                     </div>
@@ -82,6 +86,7 @@
 
                 
             </section>
+
 
             <section id="timeline">
                 <div class="window">
@@ -98,8 +103,6 @@
                     <div class="window-content">
                         <div class="timeline">
                             <div class="timeline-empty">
-                                <img src="https://dummyimage.com/100x100/000/fff">
-                                <img src="https://dummyimage.com/100x100/000/fff">
                             </div>
                   
                             <div class="timeline-middle">
@@ -162,63 +165,129 @@
                                    <i> *note: DJ Furbies are yet to be released.</i></p>
                            </div>
 
-                           
-                  
                          </div>
                        
                     </div>
                 </div> 
             </section>
 
-            <section id="era-1">
+            <section id="featured-gallery">
                 <div class="window">
                     <div class="window-tab">
-                        <div class="window-title">Era-1@Furby.com </div>
+                        <div class="window-title">Featured@Furby.com </div>
                     
-                        <div class="window-button-display"></div>
-                        <div class="window-buttons">_</div>
-                        <div class="window-buttons">□</div>
-                        <div class="window-buttons">x</div>
+                        <div class="window-button-display">
+                            <div class="window-buttons">_</div>
+                            <div class="window-buttons">□</div>
+                            <div class="window-buttons">x</div>
+                        </div>
                     </div>
 
                     <div class="window-content">
-                        <p>Era 1 (1998-2002) had the Furby Adult (1998) & Furby Babies (1999) lines of Furbies. They also released some Furby Friends in this Era. </p>
-                        <div class="line-info">
-                            <h3>Furby Adult (1998)</h3>
-                            <ul>
-                                <li>Tickle, tilt & light sensor</li>
-                                <li> Infrared port</li>
-                                <li> No app/voice-recognition</li>
-                                <li>Sensitive & Friendly personalities</li>
-                                <li>Likes to dance, hug, get tickled, & have their backs rubbed.</li>
+                        <div class="slide-wrapper">
+                            <ul class="slide-list swiper-wrapper">
+                                <li class="slide-item swiper-slide">
+                                    <img src="/images/furby/tiger-furby.webp" alt="" class="slide-image">
+                                    <p class="furby-era">Era 1 (1998-2002)</p>
+                                    <h2 class="furby-title">Tiger Furby: Furby Adult (1998)</h2>
+                                    <div class="furby-data">
+                                        <div class="data-item">
+                                            <h3 class="data-label">Generation</h3>
+                                            <p class="data-value">2</p>
+                                        </div>
+                                        <div class="data-item">
+                                            <h3 class="data-label">Mane or Tail</h3>
+                                            <p class="data-value">Mane</p>
+                                        </div>
+                                        <div class="data-item">
+                                            <h3 class="data-label">Status</h3>
+                                            <p class="data-value">Released, & Fresh New Look</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="slide-item swiper-slide">
+                                    <img src="/images/furby/furbacca-furby.webp" alt="" class="slide-image">
+                                    <p class="furby-era">Era 3 (2012-2015)</p>
+                                    <h2 class="furby-title">Furbacca the Wookiee Furby: Furby Boom</h2>
+                                    <div class="furby-data">
+                                        <div class="data-item">
+                                            <h3 class="data-label">Generation</h3>
+                                            <p class="data-value">Special Edition & Furby Friend</p>
+                                        </div>
+                                        <div class="data-item">
+                                            <h3 class="data-label">Mane or Tail</h3>
+                                            <p class="data-value">Tail</p>
+                                        </div>
+                                        <div class="data-item">
+                                            <h3 class="data-label">Status</h3>
+                                            <p class="data-value">Released</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="slide-item swiper-slide">
+                                <img src="/images/furby/jester-furby.webp" alt="" class="slide-image">
+                                <p class="furby-era">Era 1 (1998-2002)</p>
+                                <h2 class="furby-title">Jester Furby: Furby Adult (1998)</h2>
+                                <div class="furby-data">
+                                    <div class="data-item">
+                                        <h3 class="data-label">Generation</h3>
+                                        <p class="data-value">Special Edition</p>
+                                    </div>
+                                    <div class="data-item">
+                                        <h3 class="data-label">Mane or Tail</h3>
+                                        <p class="data-value">Tail</p>
+                                    </div>
+                                    <div class="data-item">
+                                        <h3 class="data-label">Status</h3>
+                                        <p class="data-value">Released</p>
+                                    </div>
+                                </div>
+                                </li>
+
+                                <li class="slide-item swiper-slide">
+                                <img src="/images/furby/gold-furbling.webp" alt="" class="slide-image">
+                                <p class="furby-era">Era 3 (2012-2015)</p>
+                                <h2 class="furby-title">Gold Furbling: Furby Boom Furblings</h2>
+                                <div class="furby-data">
+                                    <div class="data-item">
+                                        <h3 class="data-label">Generation</h3>
+                                        <p class="data-value">Special Edition</p>
+                                    </div>
+                                    <div class="data-item">
+                                        <h3 class="data-label">Mane or Tail</h3>
+                                        <p class="data-value">Tail</p>
+                                    </div>
+                                    <div class="data-item">
+                                        <h3 class="data-label">Status</h3>
+                                        <p class="data-value">Released</p>
+                                    </div>
+                                </div>
+                                </li>
+
+                                <li class="slide-item swiper-slide">
+                                <img src="/images/furby/goldfish-furby.webp" alt="" class="slide-image">
+                                <p class="furby-era">Era 1 (1998-2002)</p>
+                                <h2 class="furby-title">Goldfish Furby: Furby Adult (1998)</h2>
+                                <div class="furby-data">
+                                    <div class="data-item">
+                                        <h3 class="data-label">Generation</h3>
+                                        <p class="data-value">9</p>
+                                    </div>
+                                    <div class="data-item">
+                                        <h3 class="data-label">Mane or Tail</h3>
+                                        <p class="data-value">Tail</p>
+                                    </div>
+                                    <div class="data-item">
+                                        <h3 class="data-label">Status</h3>
+                                        <p class="data-value">Unreleased</p>
+                                    </div>
+                                </div>
+                                </li>
+
+                        
                             </ul>
-                        </div>
-
-                        <div class="line-info">
-                            <h3>Furby Babies (1999)</h3>
-                            <ul>
-                                <li>Smaller size than Furby Adult (1998)</li>
-                                <li>Learns non-furbish pre-set language quicker than Furby Adult (1998)</li>
-                                <li>Higher-pitched voice compared to Furby Adult (1998)</li>
-                                <li>Unable to dance</li>
-                                <li>White eyelashes</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="window">
-                    <div class="window-tab">
-                        <div class="window-title">Furby-1998@Furby.com </div>
-                    
-                        <div class="window-button-display"></div>
-                        <div class="window-buttons">_</div>
-                        <div class="window-buttons">□</div>
-                        <div class="window-buttons">x</div>
-                    </div>
-
-                    <div class="image-gallery">
-                        <div class="slide">
                             
                         </div>
                     </div>
@@ -244,6 +313,7 @@
             <p>Created by Keerthana Deivanayagam</p>
         </footer>
     </div>
+
 </body>
 
 </html>
