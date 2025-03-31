@@ -16,14 +16,16 @@ body {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         "header header header"
         "sidebar_main content sidebar_secondary"
         "footer footer footer";
-    padding: 50px;
-    margin-right: 10%;
-    margin-left: 10%;
+    padding: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    min-height: 100vh;
+    gap: 10px;
 }
 
 .skip-link {
@@ -42,11 +44,12 @@ body {
 
 .skip-link:focus {
     top: 10px;
-    outline: solid rgb(180, 0, 135);
+    outline: dashed rgb(180, 0, 135);
 }
 
 .skip-link:focus {
     margin-top: 20px;
+    background-color: #f6ace3;
 }
 
 .skip-link:hover {
@@ -64,9 +67,9 @@ body {
     padding: 50px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    outline-style: dotted;
-    outline-width: 3px;
-    outline-color: azure;
+    outline-style: ridge;
+    outline-width: 4px;
+    outline-color: rgb(255, 115, 185);
     background-image: url(/images/tamagotchi/banner.gif);
     background-size: contain;
     width: 100%;
@@ -80,7 +83,10 @@ body {
 
 .sidebar_main {
     grid-area: sidebar_main;
-    background-color: #de83e5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #de83e572;
 }
 
 .section {
@@ -177,9 +183,13 @@ body {
     color: white;
 }
 
+a:focus {
+    background-color: #ffffff;
+}
+
 .music_box {
     display: grid;
-    height: 240px;
+    height: 265px;
     width: 100%;
 }
 
@@ -201,17 +211,18 @@ body {
 
 .content {
     grid-area: content;
-    display: grid;
-    width: 100%;
-    justify-content: center;
-    background-color: #e35095;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: #de83e572;
 }
 
 /*memeory game*/
 
 .memory-game {
-    width: 890px;
-    height: 560px;
+    width: auto;
+    height: 650px;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
@@ -275,9 +286,11 @@ body {
 
 .sidebar_secondary {
     grid-area: sidebar_secondary;
-    display: grid;
-    justify-content: center;
-    background-color: #de83e5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    background-color: #de83e572;
 }
 
 
@@ -308,18 +321,16 @@ body {
 }
 
 .gif_images {
-    display: grid;
-    justify-content: space-between;
-    padding-top: 60px;
-    padding-bottom: 55px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 875px;
 }
 
 .gif_images img {
-    display: grid;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    width: 100%;
+    width: 90%;
 }
 
 .footer {
@@ -329,45 +340,11 @@ body {
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    color: rgb(252, 230, 89);
+    color: rgb(255, 255, 255);
     background-color: rgb(129, 202, 236);
     font-size: 1.75em;
 }
 
-
-@media (max-width: 1500px) {
-    .container {
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 1fr 5fr 1fr;
-        grid-template-rows: auto 1fr auto;
-        grid-template-areas:
-            "header header header"
-            "sidebar_main content sidebar_secondary"
-            "footer footer footer";
-        padding: 50px;
-        margin-right: 10%;
-        margin-left: 10%;
-    }
-
-    .window_button_display {
-        float: right;
-
-    }
-
-    .window_buttons {
-        cursor: url(/images/tamagotchi/pointer_cursor.png), auto;
-        border-top: 2px solid white;
-        border-left: 2px solid white;
-        border-bottom: 2px solid #c6397b;
-        border-right: 2px solid #8c2555;
-        color: #e35095;
-        padding: 2px;
-        line-height: 8px;
-        display: inline-block;
-        text-align: center;
-    }
-}
 
 
 @media (max-width: 1100px) {
@@ -397,7 +374,7 @@ body {
 
     .memory-game {
         width: 100%;
-        height: 540px;
+        height: 640px;
     }
 
     .memory-card {
@@ -409,38 +386,10 @@ body {
         transition: transform .5s;
     }
 
-    .marquee {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-        background-color: #fce6fc;
-        overflow: hidden;
-        position: relative;
-        height: 50px;
+    .links a img {
         width: 100%;
-        /* Full width of its parent */
-        white-space: nowrap;
     }
 
-    .marquee img {
-        position: absolute;
-        width: auto;
-        object-fit: contain;
-        height: 5vh;
-        margin: 0;
-        line-height: 50px;
-        text-align: center;
-        transform: translateX(100%);
-        animation: scroll-left 20s linear infinite;
-    }
-
-    @keyframes scroll-left {
-        0% {
-            transform: translateX(100%);
-        }
-
-        100% {
-            transform: translateX(-100%);
-        }
-    }
 
     .gif_images {
         width: 100%;
@@ -449,7 +398,7 @@ body {
 
 /*---Mobile----*/
 
-@media (max-width: 550px) {
+@media (max-width: 480px) {
     .container {
         grid-template-columns: auto;
         grid-template-rows: auto;
@@ -485,7 +434,7 @@ body {
     .memory-game {
         grid-template-columns: 1fr;
         width: 100%;
-        height: 440px;
+        height: 400px;
     }
 
     .video_container {
@@ -507,5 +456,9 @@ body {
 
     .footer p {
         font-size: 20px;
+    }
+
+    .gif_images {
+        display: inline;
     }
 }

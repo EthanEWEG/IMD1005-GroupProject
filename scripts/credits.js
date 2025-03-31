@@ -37,8 +37,8 @@ furbyBtn.addEventListener("click", function() {
     titleDiv.style.display = "block";
 
     //text updates
-    nameElement.textContent = "name3";
-    textElement.textContent = "bio3";
+    nameElement.textContent = "Keerthana Deivanayagam";
+    textElement.textContent = "First year IMD student, I am mostly interested in illustration/animation right now. Eventually I hope to tie it into projects related my passion for animals and nature as well.";
 });
 
 //Ryan

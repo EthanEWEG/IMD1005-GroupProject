@@ -6,14 +6,15 @@
     <title>Furby</title>
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/furby.css">
-    <script src="furby.js"></script>
     <link rel="icon" href="/images/furby/furby-favicon.jpeg">
 </head>
 <body>
     <div class="container">
+        <a href="#skip-start" class="skip-link">Skip to main content</a>
         <header class="header">
             <div class="header-title">
-                <img src="/images/furby/header-100.gif" alt="header title">
+                <img alt="Animated Header: Sparkles against a black background inside the word FURBY, with a purple outline & white shadow." 
+                src="/images/furby/header-100.gif">
             </div>
         </header>
 
@@ -52,13 +53,14 @@
                     </div>
                     <div class="music-box">
                         <iframe width="100%" height="340px" allow="autoplay"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1993063140&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1993063140&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" alt="Music Box with white furby wearing headphones and glasses image cover."></iframe>
                     </div>
                 </div>
             </section>
 
         </aside>
-        <main class="content">
+
+        <main class="content" id="skip-start">
 
             <section id="welcome">
                 <div class="window" id="welc">
@@ -73,11 +75,11 @@
                     </div>
 
                     <div class="window-content" id="welc-content">
-                        <img class="welc-img" id="welc-left" src="/images/furby/welc-left-100.png">
+                        <img class="welc-img" id="welc-left" src="/images/furby/welc-left-100.png" alt="Pixel-art of a blue and pink spotted furby, facing the text from the left.">
 
                         <p>Welcome to the world of Furby! Inspired by the success of Tamagotchis and Giga Pets, the creators of Furby - Dave Hampton & Caleb Chung - wanted to create a new kind of virtual pet: a completely interactive animatronic pet that could talk, sing, & dance. Furby “pets” are an iconic and memorable part of many who grew up in the 2000s, myself included. </p>
 
-                        <img class="welc-img" id="welc-right" src="/images/furby/welc-right-100.png">
+                        <img class="welc-img" id="welc-right" src="/images/furby/welc-right-100.png" alt="Pixel-art of a blue and pink spotted furby, facing the text from the right.">
 
 
                     </div>
@@ -158,7 +160,7 @@
                              </div>
 
                              <div class="timeline-component timeline-content">
-                                <h3>Era 5 (2023-present)</h3>
+                                <h3>Era 5 (2023-)</h3>
                                 <p><u>Owned by:</u> Hasbro <br>
                                     <u>Furby Lines:</u> Furby (2023), Furby Furblets, DJ Furby, DJ Furby Furblets <br>
                                    <i> *note: DJ Furbies are yet to be released.</i></p>
@@ -170,7 +172,7 @@
                 </div> 
             </section>
 
-            <section id="featured-gallery">
+            <section id="gallery">
                 <div class="window">
                     <div class="window-tab">
                         <div class="window-title">Featured@Furby.com </div>
@@ -184,109 +186,121 @@
 
                     <div class="window-content">
                         <div class="slide-wrapper">
-                            <ul class="slide-list swiper-wrapper">
-                                <li class="slide-item swiper-slide">
-                                    <img src="/images/furby/tiger-furby.webp" alt="" class="slide-image">
-                                    <p class="furby-era">Era 1 (1998-2002)</p>
-                                    <h2 class="furby-title">Tiger Furby: Furby Adult (1998)</h2>
-                                    <div class="furby-data">
-                                        <div class="data-item">
-                                            <h3 class="data-label">Generation</h3>
-                                            <p class="data-value">2</p>
-                                        </div>
-                                        <div class="data-item">
-                                            <h3 class="data-label">Mane or Tail</h3>
-                                            <p class="data-value">Mane</p>
-                                        </div>
-                                        <div class="data-item">
-                                            <h3 class="data-label">Status</h3>
-                                            <p class="data-value">Released, & Fresh New Look</p>
-                                        </div>
-                                    </div>
-                                </li>
 
-                                <li class="slide-item swiper-slide">
-                                    <img src="/images/furby/furbacca-furby.webp" alt="" class="slide-image">
-                                    <p class="furby-era">Era 3 (2012-2015)</p>
-                                    <h2 class="furby-title">Furbacca the Wookiee Furby: Furby Boom</h2>
-                                    <div class="furby-data">
-                                        <div class="data-item">
-                                            <h3 class="data-label">Generation</h3>
-                                            <p class="data-value">Special Edition & Furby Friend</p>
-                                        </div>
-                                        <div class="data-item">
-                                            <h3 class="data-label">Mane or Tail</h3>
-                                            <p class="data-value">Tail</p>
-                                        </div>
-                                        <div class="data-item">
-                                            <h3 class="data-label">Status</h3>
-                                            <p class="data-value">Released</p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="slide-item swiper-slide">
-                                <img src="/images/furby/jester-furby.webp" alt="" class="slide-image">
+                            <div class="slide-item">
+                                <img src= "/images/furby/tiger-furby.webp" alt="Front-on image of Tiger Furby Adult (1998) with mouth and eyes open against a white background." class="slide-image">
                                 <p class="furby-era">Era 1 (1998-2002)</p>
-                                <h2 class="furby-title">Jester Furby: Furby Adult (1998)</h2>
+                                <h2 class="furby-title">Tiger Furby</h2>
+
                                 <div class="furby-data">
                                     <div class="data-item">
-                                        <h3 class="data-label">Generation</h3>
-                                        <p class="data-value">Special Edition</p>
+                                     <h3 class="data-label">Generation</h3>
+                                     <p class="data-value">2</p>
                                     </div>
+
                                     <div class="data-item">
-                                        <h3 class="data-label">Mane or Tail</h3>
-                                        <p class="data-value">Tail</p>
+                                     <h3 class="data-label">Mane or Tail</h3>
+                                      <p class="data-value">Mane</p>
                                     </div>
+
                                     <div class="data-item">
-                                        <h3 class="data-label">Status</h3>
-                                        <p class="data-value">Released</p>
+                                     <h3 class="data-label">Status</h3>
+                                     <p class="data-value">Released, & Fresh New Look</p>
                                     </div>
                                 </div>
-                                </li>
+                            </div>
 
-                                <li class="slide-item swiper-slide">
-                                <img src="/images/furby/gold-furbling.webp" alt="" class="slide-image">
+                            <div class="slide-item">
+                                <img src="/images/furby/furbacca-furby.webp" alt="Front-on image of Furbacca the Wookiee Furby Adult (2012) with mouth and eyes open, Furby Boom model, against a white background. " class="slide-image">
                                 <p class="furby-era">Era 3 (2012-2015)</p>
-                                <h2 class="furby-title">Gold Furbling: Furby Boom Furblings</h2>
+                                <h2 class="furby-title">Furbacca the Wookiee Furby</h2>
+
                                 <div class="furby-data">
                                     <div class="data-item">
                                         <h3 class="data-label">Generation</h3>
-                                        <p class="data-value">Special Edition</p>
+                                        <p class="data-value">Special Edition (Furby Friend)</p>
                                     </div>
+
                                     <div class="data-item">
                                         <h3 class="data-label">Mane or Tail</h3>
                                         <p class="data-value">Tail</p>
                                     </div>
+
                                     <div class="data-item">
                                         <h3 class="data-label">Status</h3>
                                         <p class="data-value">Released</p>
                                     </div>
                                 </div>
-                                </li>
+                            </div>
 
-                                <li class="slide-item swiper-slide">
-                                <img src="/images/furby/goldfish-furby.webp" alt="" class="slide-image">
+                            <div class="slide-item">
+                                <img src="/images/furby/jester-furby.webp" alt="Three-quarters image of Jester Furby Adult (1998) with mouth and eyes open in someone's palm." class="slide-image">
                                 <p class="furby-era">Era 1 (1998-2002)</p>
-                                <h2 class="furby-title">Goldfish Furby: Furby Adult (1998)</h2>
+                                <h2 class="furby-title">Jester Furby</h2>
+
+                                <div class="furby-data">
+                                    <div class="data-item">
+                                        <h3 class="data-label">Generation</h3>
+                                        <p class="data-value">Special Edition</p>
+                                    </div>
+
+                                    <div class="data-item">
+                                        <h3 class="data-label">Mane or Tail</h3>
+                                        <p class="data-value">Tail</p>
+                                    </div>
+
+                                    <div class="data-item">
+                                        <h3 class="data-label">Status</h3>
+                                        <p class="data-value">Released<p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-item">
+                                <img src="/images/furby/gold-furbling.webp" alt="Front-on image of Gold Furby Furbling: Furby Boom with mouth and eyes open against a white background." class="slide-image">
+                                <p class="furby-era">Era 3 (2012-2015)</p>
+                                <h2 class="furby-title">Gold Furbling</h2>
+
+                                <div class="furby-data">
+                                    <div class="data-item">
+                                        <h3 class="data-label">Generation</h3>
+                                        <p class="data-value">Special Edition</p>
+                                    </div>
+
+                                    <div class="data-item">
+                                        <h3 class="data-label">Mane or Tail</h3>
+                                        <p class="data-value">Tail</p>
+                                    </div>
+
+                                    <div class="data-item">
+                                        <h3 class="data-label">Status</h3>
+                                        <p class="data-value">Released</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-item">
+                                <img src="/images/furby/goldfish-furby.webp" alt="Slight-upward image of unreleased Goldfish Furby, Furby Adult (1998), eyes and mouth open looking slightly down, on a shadowed white-grey background." class="slide-image">
+                                <p class="furby-era">Era 1 (1998-2002)</p>
+                                <h2 class="furby-title">Goldfish Furby</h2>
+
                                 <div class="furby-data">
                                     <div class="data-item">
                                         <h3 class="data-label">Generation</h3>
                                         <p class="data-value">9</p>
                                     </div>
+
                                     <div class="data-item">
                                         <h3 class="data-label">Mane or Tail</h3>
                                         <p class="data-value">Tail</p>
                                     </div>
+
                                     <div class="data-item">
                                         <h3 class="data-label">Status</h3>
                                         <p class="data-value">Unreleased</p>
                                     </div>
                                 </div>
-                                </li>
-
-                        
-                            </ul>
+                            </div>
                             
                         </div>
                     </div>
