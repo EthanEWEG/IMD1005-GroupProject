@@ -93,7 +93,7 @@ p {
     padding: 50px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 3px;
     outline-color: var(--yellow);
     background-image: url(/images/furby/furby-gif.gif);
