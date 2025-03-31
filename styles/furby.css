@@ -13,8 +13,9 @@
     --green: #418a70;
 }
 * {
-    cursor: url(/images/furby/cursor.png), auto;
+    cursor: url(/images/furby/cursor.png),default;
     box-sizing: border-box;
+
     
 }
 
@@ -26,38 +27,81 @@ body {
     
 }
 
+.skip-link {
+    position: absolute;
+    top: -50px;
+    justify-self: center;
+    background-color: var(--dark);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    transition: transform 1.3s ease-in-out;
+}
+
+.skip-link:focus {
+    top: 10px;
+    outline: solid 1px var(--light);
+    background-color: var(--dark);
+    margin-top: 20px;
+}
+
+
+.skip-link:hover {
+    background-color: var(--green);
+    color: white;
+    outline: #391661;
+}
+
+.skip-link:active {
+    background-color: var(--green);
+}
+
+a:hover, button:hover{
+    cursor: url('/images/furby/pointer.png'), pointer;
+}
+
+a:focus, button:focus{
+    background-color: white;
+}
+
 p {
     color: var(--light);
 }
 .container {
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 4.9fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-        "header header header"
-        "sidebar-main content content"
-        "footer footer footer";
+        "header header"
+        "sidebar-main content "
+        "footer footer";
     padding: 50px;
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 3%;
+    margin-left: 3%;
     overflow: hidden;
+    max-width: fit-content;
 }
 
 .header {
     grid-area: header;
-    display: grid;
+    display: flex;
     justify-content: center;
-    padding: 30px;
-    border-radius: 10px;
-    border-top-right-radius: 10px;
-    outline-style: solid;
+    padding: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    outline-style: dotted;
     outline-width: 3px;
     outline-color: var(--yellow);
     background-image: url(/images/furby/furby-gif.gif);
     background-size: contain;
     width: 100%;
     margin-bottom: 10px;
+    /* max-width: 1992px; */
+    
 }
 
 .header .header-title {
@@ -65,6 +109,8 @@ p {
     justify-content: center;
     width: 100%;
 }
+
+
 
  .sidebar-main {
     grid-area: sidebar-main;
@@ -83,8 +129,8 @@ p {
     background: linear-gradient(180deg,
             var(--med-dark) 30%,
             var(--dark) 100%);
-    /* min-height: fit-content;
-    max-width: 700px; */
+    /* min-height: max-content;
+    max-width: max-content; */
     
 }
 
@@ -109,6 +155,15 @@ p {
     font-size: 18px;
     font-weight: bold;
     text-align: right;
+}
+
+.window-content {
+    padding: 5px;
+    overflow: hidden;
+}
+
+.content .window-content {
+  
 }
 
 .window-button-display {
@@ -174,6 +229,7 @@ p {
 
 .music-box {
     display: grid;
+    cursor: url(../images/furby/pointer.png), pointer;
 }
 
 .music-box .iframe {
@@ -190,10 +246,16 @@ p {
 .content {
     grid-area: content;
     display: grid;
-    justify-content: center;
     background-color: var(--dark);
     padding: 10px;
     gap: 10px;
+    /* max-width: 1630px; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'welc welc'
+    'timeline gallery'
+    ;
 }
 
 
@@ -219,19 +281,11 @@ p {
     font-size: 18px;
 }
 
-a:hover, button:hover{
-    cursor: url('/images/furby/pointer.png'), pointer;
-}
 
-a:focus, button:focus{
-    background-color: #ffffff;
-}
+
 
 /* CONTENT  */
 
-.window-content {
-    padding: 10px;
-}
 
 /* welcome */
 #welc p {
@@ -241,10 +295,12 @@ a:focus, button:focus{
     margin-right: 10px;
 }
 
+
 #welc-content {
-    display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
+    display: flex;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto;
+    max-width: fit-content;
     
 }
 .welc-img {
@@ -270,7 +326,7 @@ a:focus, button:focus{
 .timeline {
   width: 90%;
   height: auto;
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -335,20 +391,45 @@ a:focus, button:focus{
 
 /* Slides gallery  */
 
-.slide-list .slide-item  {
+#gallery .window-content {
+    min-height: 902.39px;
+    max-height: 998.39px ;
+   
+}
+
+.slide-wrapper .slide-item  {
     display: block;
-    background: var(--base);
     padding: 18px;
     text-decoration: none;
     list-style: none;
     box-shadow: 0 10px 10px rgba(248, 150, 200, 0.5);
     border: 2px solid purple;
-    max-width: fit-content;
     margin: 10px;
+    background-color: var(--base);
+    max-width: fit-content;
+}
+
+
+.slide-item {
+    max-width: 100%;
+    
+}
+
+#gallery .window-content {
+    overflow-y: scroll;
 }
     
+.slide-wrapper {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    overflow-y: visible;
+    
+    
 
-.slide-list .slide-image {
+}
+.slide-wrapper .slide-image {
     object-fit: cover;
     aspect-ratio: 1/1;
     width: 360px;
@@ -356,20 +437,21 @@ a:focus, button:focus{
 
 }
 
-.slide-list .furby-era  {
-    color: var(--med-dark);
+.slide-wrapper .furby-era  {
+    color: var(--purple);
     padding: 8px 16px;
     font-size: 0.95rem;
-    width: fit-content;
+    width: max-content;
     border-radius: 20px;
     border: var(--med-dark) solid 1px;
     margin: 16px 0 18px;
-    background: var(--med-light);
+    background: var(--light);
+
 }
 
 
 
-.slide-list .furby-title {
+.slide-wrapper .furby-title {
     font-size: 1.19rem;
     color: var(--dark);
     font-weight: 600;
@@ -385,39 +467,120 @@ a:focus, button:focus{
     overflow: hidden;
     padding-left: 9px;
     padding-right: 9px;
+    
 }
 
-.slide-list {
-    overflow: auto;
+.furby-data .data-value {
+
+    justify-content: center;
+    align-content: center;
+
+}
+
+
+
+.slide-wrapper {
   white-space: nowrap;
   padding: 10px;
   user-select: none;
+
 }
 
-.slide-list::-webkit-scrollbar {
+.window-content::-webkit-scrollbar {
     width: 5px;
   height: 8px;
   background-color: var(--dark)
 }
 
-.slide-list::-webkit-scrollbar-thumb {
-    background: var(--med-dark);
-    cursor: url(../images/furby/pointer.png), pointer;
-}
-
-.slide-list::-webkit-scrollbar-thumb:hover {
+.window-content::-webkit-scrollbar-thumb {
     background: var(--base);
     cursor: url(../images/furby/pointer.png), pointer;
 }
 
-.slide-list::-webkit-scrollbar-thumb:active {
-    background: var(--base);
+.window-content::-webkit-scrollbar-thumb:hover {
+    background: var(--light);
     cursor: url(../images/furby/pointer.png), pointer;
 }
+
+.window-content::-webkit-scrollbar-thumb:active {
+    background: var(--light);
+    cursor: url(../images/furby/pointer.png), pointer;
+}
+
+.window-content::-webkit-scrollbar-thumb::before {
+    background: var(--light);
+    cursor: url(../images/furby/pointer.png), pointer;
+    width: 200%;
+    height: 200%;
+}
+#welcome {
+    grid-area: welc;
+}
+
+#timeline {
+    grid-area: timeline;
+}
+
+#gallery {
+    grid-area: gallery;
+}
+
 
 /* GAME */
 
-@media (max-width: 800px) {
+@media (max-width: 1983px) {
+    .slide-wrapper .slide-item {
+        min-width: min-content;
+
+    }
+
+    #gallery .window-content {
+        min-height: 998.39px;
+        max-height: 1214.39px ;
+       
+    }
+
+}
+
+@media (max-width:1593px) {
+    .slide-wrapper  {
+        margin: 10px;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto auto auto auto;
+    }
+    .slide-item {
+        min-width: max-content;
+    }
+
+    #gallery .window-content {
+        min-height: 998.39px;
+        max-height: 1214.39px ;
+       
+    }
+}
+
+@media (max-width:1333px) {
+    .content {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        'welc'
+        'timeline'
+        'gallery'
+
+    }
+
+    .slide-wrapper  {
+        margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto auto;
+    }
+
+}
+
+@media (max-width:888px) {
     .container {
         grid-template-rows: 50px 50px 1fr 50px 50px;
         grid-template-columns: 1fr;
@@ -428,7 +591,10 @@ a:focus, button:focus{
             "content"
             "content"
             "content"
-            "sidebar-secondary"
             "footer";
-    }
+
+        margin: 1%;
+    } 
+    
+
 }
