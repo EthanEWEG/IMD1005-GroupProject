@@ -36,12 +36,12 @@ p {
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header header header"
-        "sidebar-main content sidebar-secondary"
+        "sidebar-main content content"
         "footer footer footer";
     padding: 50px;
     margin-right: 5%;
     margin-left: 5%;
-    height: 100vh;
+    overflow: hidden;
 }
 
 .header {
@@ -66,10 +66,10 @@ p {
     width: 100%;
 }
 
-/* .sidebar-main {
+ .sidebar-main {
     grid-area: sidebar-main;
     background-color: #de83e5;
-} */
+} 
 
 .section {
     margin-bottom: 20px;
@@ -99,11 +99,6 @@ p {
     overflow: hidden;
 }
 
-
-    
-    
-
-
 .window-title {
     display: inline-block;
     align-content: center;
@@ -114,7 +109,6 @@ p {
     font-size: 18px;
     font-weight: bold;
     text-align: right;
-
 }
 
 .window-button-display {
@@ -143,7 +137,8 @@ p {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
+    min-width: 240px;
 }
 
 .sidebar-main .navbar {
@@ -154,7 +149,6 @@ p {
     border-bottom: 2px solid var(--med-light);
     height: auto;
     overflow: auto;
-    
 }
 
 .navbar a {
