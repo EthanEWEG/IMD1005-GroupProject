@@ -307,22 +307,6 @@
                 </div>
             </section>
             <section>
-                <div class="window">
-                    <div class="window_tab">
-                        <div class="window_title">Time</div>
-                        <div class="window_button_display">
-                            <div class="window_buttons">_</div>
-                            <div class="window_buttons">□</div>
-                            <div class="window_buttons">x</div>
-                        </div>
-                    </div>
-                    <div class="time_container">
-                        <div class="time">
-                        </div>
-                        <div class="date">
-                        </div>
-                        <img src="images/zhuzhu/pink-heart.gif">
-                    </div>
                     <div class="window">
                         <div class="window_tab">
                             <div class="window_title">Chat Box</div>
@@ -331,33 +315,18 @@
                                 <div class="window_buttons">□</div>
                                 <div class="window_buttons">x</div>
                             </div>
-                                <div class="app">
-                                    <div class="screen join-screen active">
-                                        <div class="form">
-                                            <h2>Join Chatroom</h2>
-                                            <div class="form-input">
-                                                <label>Username</label>
-                                                <input type="text" id="username">
-                                            </div>
-                                            <div class="form-input">
-                                                <button id="join-user">Join</button>
-                                            </div>
-                                        </div>
-
+                            <div class="chat-container">
+                                <div class="chat-box">
+                                    <div class="messages">
                                     </div>
-                                    <div class="screen chat-screen">
-                                        <div class="head">
-                                            <div class="logo">Chatroom</div>
-                                            <button id="exit-chat">Exit</button>
-                                        </div>
-                                        <div class="messages">
-                                        </div>
-                                        <div class="typebox">
-                                            <input type="text" id="message-input">
-                                            <button id="send-message">Send</button>
-                                        </div>
+                                    <div class="input-box">
+                                        <input type="text" id="message-input" placeholder="Type a message..." />
+                                        <button id="send-message">Send</button>
                                     </div>
                                 </div>
+                            </div>
+                        
+                            <script src="scripts/zhuzhu.js"></script>
                 </div>
             </section>
             <section>
@@ -414,115 +383,7 @@
         </aside>
     <footer class="footer">&copy; 2025 Rania Jabi IMD 1005 | All Rights Reserved</footer>
 </div>
+<script src="scripts/zhuzhu.js"></script>
 </body>
 </html>
 
-
-<script>
-
-
-const timeElement = document.querySelector(".time");
-const dateElement = document.querySelector(".date");
-
-
-function formatTime(date) {
-const hours12 = date.getHours() % 12 || 12;
-const minutes = date.getMinutes();
-const isAm = date.getHours() < 12;
-
-return `${hours12.toString().padStart(2, "0")}:${minutes
-.toString()
-.padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
-}
-
-
-function formatDate(date) {
-const DAYS = [
-"Sunday",
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday"
-];
-const MONTHS = [
-"January",
-"February",
-"March",
-"April",
-"May",
-"June",
-"July",
-"August",
-"September",
-"October",
-"November",
-"December"
-];
-
-return `${DAYS[date.getDay()]}, ${
-MONTHS[date.getMonth()]
-} ${date.getDate()} ${date.getFullYear()}`;
-}
-
-setInterval(() => {
-const now = new Date();
-
-timeElement.textContent = formatTime(now);
-dateElement.textContent = formatDate(now);
-}, 200);
-
-
-
-
-
-
-const express = require("express");
-const path = require ("path");
-
-const app = express();
-const server = require("http").createServer(app);
-
-const io = require("socket.io")(server);
-
-app.use(express.static(path.join(_dirname+"/public")))
-
-io.on("connection", function(socket){
-    socket.on ("newuser", function(username){
-        socket.broadcast.emit("update", username + "joined the conversation");
-    });
-    socket.on("exituser", function(username){
-        socket.broadcast.emit("update", username + "left the conversation");
-    });
-    socket.on("chat", function(message){
-        socket.broadcast.emit("chat", message);
-    });
-});
-
-server.listen(5000);
-
-
-(function(){
-    const app = document.querySelector(".app");
-    const socket = io();
-
-    let uname;
-
-    app.querySelector(".join-screen #join-user").addEventListener("click", function() {
-    console.log("Join button clicked");  
-    let username = app.querySelector(".join-screen #username").value;
-    if (username.length == 0) {
-        return;
-    }
-    socket.emit("newuser", username);
-    uname = username;
-    app.querySelector(".join-screen").classList.remove("active");
-    app.querySelector(".chat-screen").classList.add("active");
-});
-})();
-
-
-
-
-</script>
