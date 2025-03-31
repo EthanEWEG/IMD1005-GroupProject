@@ -56,7 +56,7 @@ zhuzhuBtn.addEventListener("click", function() {
 
     //text updates
     nameElement.textContent = "Rania Jabi";
-    textElement.textContent = "First year IMD student, want to become a UX/UI designer or illustrator in the future! When I am not swamped with homework, I like to crochet for my small business!";
+    textElement.textContent = "First year IMD student, want to become a UX/UI designer or illustrator in the future! When I am not swamped with homework, I like to figure skate or crochet for my small business!";
 });
 
 //close window btns
