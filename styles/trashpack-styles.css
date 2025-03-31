@@ -219,7 +219,7 @@ audio {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: rgb(22, 54, 0);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -748,6 +748,15 @@ blockquote {
     border-color: #5a8d3e;
     box-shadow: 0 1px 1px 1px rgba(90, 141, 62, 0.5);
 }
+
+.dark-mode .window_title {
+    display: inline-block;
+    color: #ffffff;
+    margin: 1px 1px 5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 
 .dark-mode .window_tab {
     background-color: #3a4a32;
