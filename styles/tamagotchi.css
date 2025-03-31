@@ -340,7 +340,7 @@ a:focus {
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    color: rgb(252, 230, 89);
+    color: rgb(255, 255, 255);
     background-color: rgb(129, 202, 236);
     font-size: 1.75em;
 }
