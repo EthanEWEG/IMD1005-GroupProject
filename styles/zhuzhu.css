@@ -110,31 +110,7 @@ body {
     text-align: center;
 }
 
-.time_container {
-    display: grid;
-    justify-content: center;
-    font-size: 9px;
-    padding: 24px;
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-    font-weight: 500;
-}
 
-.time {
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    font-size: 3em;
-    color: #aa44a7;
-}
-
-.date {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.75em;
-}
 
 
 
@@ -242,7 +218,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    
 }
 .hero-image {
     border-radius: 50px;
@@ -305,7 +281,7 @@ body {
 
 .carousel {
     display: flex;        
-    animation: scroll 40s linear infinite;  
+    animation: scroll 30s linear infinite;  
 }
 .carousel img {
     width: 250px;         
@@ -317,36 +293,44 @@ body {
         transform: translateX(0);   
     }
     100% {
-        transform: translateX(-2000%);  
+        transform: translateX(-1000%);  
     }
 }
 
 .scroll-box {
-    align-items: center;
+    width: 90%;
+    max-width: 1200px;  
+    box-sizing: border-box; 
+    margin: 20px auto;  
+    padding: 15px;
+    gap: 20px;
+    width: 100%;
     height: 250px;       
     background-color: #fcd9ff; 
     border: 2px dotted #f4a4b7; 
-    padding: 20px; 
     overflow-y: auto; 
     color: #882233; 
+  
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     flex-direction: row;
 }
 .image-row {
-    margin: 45px;
-    align-items: center;
     display: flex;           
     gap: 10px;    
      
 }
 .image-row img {
     align-items: center;
-    width: 150px;          
+    width: 100%;          
     height: 150px;             
     object-fit: cover;         
     transition: transform 0.3s; 
     border-radius: 10px;
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 0;  
+    max-width: 100%;
+    object-fit: cover;
 }
 .image-row img:hover {
     transform: scale(1.1);     
@@ -480,10 +464,14 @@ button:hover {
             "sidebar-secondary"
             "footer";
     }
+    .chat-container{
+        width: 100%;
+    }
 
     main, .content-container {
         grid-template-columns: 1fr;
     }
+    
 
 }
 
@@ -506,10 +494,6 @@ button:hover {
     .text-content {
         max-width: 100%;
     }
-    .image-container img {
-        max-width: 50%;
-        margin-top: 10px;
-    }
     .sidebar-main, .window, .window_tab, .navbar a {
         width: 100%;
         align-items: center;
@@ -529,10 +513,12 @@ button:hover {
         width: 100%;
         height: auto;
     }
+    .chat-container{
+        width: 100%;
+    }
     .widget-content {
         flex-direction: column;
         align-items: center;
-        width: 50%;
     
     }
     .hero-text {
@@ -570,5 +556,41 @@ button:hover {
 
     .hero-subtitle {
         font-size: 1.1em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .image-row img {
+        flex: 1 1 calc(50% - 20px); /* Two images per row */
+        height: 130px;
+    }
+    .scroll-box {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-row img {
+        flex: 1 1 calc(100% - 20px); /* One image per row */
+        height: 120px;
+    }
+    .scroll-box {
+        height: 200px;
+    }
+    .scroll-box h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-box {
+        width: 95%;
+        height: 180px;
+    }
+    .scroll-box h2 {
+        font-size: 18px;
+    }
+    .image-row img {
+        height: 100px;
     }
 }
