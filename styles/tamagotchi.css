@@ -7,8 +7,8 @@
 }
 
 body {
-    background-image: url(/images/tamagotchi/bg.png);
-    background-size: contain;
+    background-image: url(/images/tamagotchi/sparkle_bg.gif);
+    background-color: #fdf9dd;
     font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -59,9 +59,9 @@ body {
 
 .header {
     grid-area: header;
-    display: grid;
+    display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: 50px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     outline-style: dotted;
@@ -104,6 +104,7 @@ body {
     border-bottom: 3px solid #de83e5;
     padding: 1px;
     background-color: #f7cbfb;
+    overflow: hidden;
 }
 
 .window_title {
@@ -303,7 +304,7 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 1.75em;
+    font-size: 1.8em;
 }
 
 .gif_images {
