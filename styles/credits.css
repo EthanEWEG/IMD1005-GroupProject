@@ -170,6 +170,7 @@ footer {
 
 .icons {
     position: absolute;
+    width: 300px;
     top: 0;
     left: 0;
     z-index: 1;
@@ -185,7 +186,7 @@ footer {
 }
 
 .icons button h3 {
-    color: #eeeeee;
+    color: #010101;
     font-size: 15px;
     cursor: url(/images/credits/hand_cursor.png), auto;
 }
@@ -310,7 +311,7 @@ button:focus {
     }
 
     .icons button {
-        width: 80px;
+        width: 100px;
     }
 
     .icons button h3 {
@@ -334,11 +335,11 @@ button:focus {
     }
 
     .icons button {
-        width: 60px;
+        width: 80px;
     }
 
     .icons button h3 {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     #nav {
@@ -347,7 +348,7 @@ button:focus {
 }
 
 @media (max-width: 450px) {
-    .title{
+    .title {
         width: 200px;
     }
 }
