@@ -88,11 +88,11 @@ p {
 
 .header {
     grid-area: header;
-    display: flex;
+    display: grid;
     justify-content: center;
-    padding: 50px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    border-top-right-radius: 10px;
     outline-style: solid;
     outline-width: 3px;
     outline-color: var(--yellow);
@@ -107,8 +107,11 @@ p {
 .header .header-title {
     display: grid;
     justify-content: center;
+    align-content: center;
     width: 100%;
+    object-fit: scale-down;
 }
+
 
 
 
@@ -596,5 +599,8 @@ p {
         margin: 1%;
     } 
     
+    .header {
+        padding: 15px;
+    }
 
 }
