@@ -345,3 +345,9 @@ button:focus {
         width: 200px;
     }
 }
+
+@media (max-width: 450px) {
+    .title{
+        width: 200px;
+    }
+}
